@@ -450,40 +450,88 @@ En este capítulo se explicarán todas las tecnologías, herramientas y accesori
 \chapter{Diseño e implementación}
 \label{sec:diseno}
 
-Aquí viene todo lo que has hecho tú (tecnológicamente). 
-Puedes entrar hasta el detalle. 
-Es la parte más importante de la memoria, porque describe lo que has hecho tú.
-Eso sí, normalmente aconsejo no poner código, sino diagramas.
-
+En este capítulo, se detalla el desarrollo del proyecto, incluyendo su estructura, los componentes en el entorno 
+inmersivo, su funcionamiento, y las interacciones implementadas.
 
 
 \section{Arquitectura general} 
 \label{sec:arquitectura}
 
-Si tu proyecto es un software, siempre es bueno poner la arquitectura (que es cómo se estructura tu programa a ``vista de pájaro'').
+El proyecto se estructura en cinco componentes enlazados entre si, representados en la figura~\ref{fig:arquitectura}. Estos componentes serán explicados a continuación:
+
+\begin{itemize}
+  \item index.html: Representamos la estructura básica de una página web para una experiencia de realidad virtual (VR). 
+  Se define un documento HTML con metadatos y referencias a archivos externos, incluyendo la biblioteca Three.js para gráficos 3D. 
+  
+  Además, se importa un módulo de JavaScript que inicializa la aplicación VR, creando una instancia de la clase "App" y asignándola a la ventana del navegador. 
+  
+  Este archivo proporciona una base para el desarrollo de aplicaciones de realidad virtual en la web.
+  
+  \item app.js: Este script es una aplicación que utiliza la biblioteca Three.js para crear una escena 3D interactiva. Que realiza:
+    
+    \begin{enumerate}
+      \item Importa las bibliotecas necesarias de Three.js para crear la escena.
+      \item Carga varias texturas de imágenes para aplicarlas a los materiales de los objetos en la escena.
+      \item Define algunas variables y objetos necesarios para el funcionamiento de la aplicación.
+      \item Crea una clase App que inicializa la escena, la cámara, la iluminación y los controles.
+      \item Dentro de la clase App, hay métodos para manejar el control de los dispositivos de entrada de VR, como los controladores y sus eventos.
+      \item Contiene un método para construir los modelos de los controladores de VR.
+      \item Otro método se encarga de manejar la lógica de la animación y la interacción del usuario con la escena.
+      \item Y finalmente, tenemos un método de renderizado que se ejecuta en bucle y actualiza la escena en cada fotograma.
+    \end{enumerate}
+
+  \item imágenes: En la arquitectura del proyecto, tenemos una carpeta llamada "imagenes" que contiene todas las imágenes utilizadas en la aplicación. 
+  Dentro de esta carpeta, tenemos subcarpetas para organizar las imágenes de acuerdo con su propósito.
+
+  Cada imagen se carga en la aplicación utilizando el constructor THREE.TextureLoader().load(), 
+  proporcionando la ruta relativa desde el punto donde se está ejecutando el código hacia la ubicación de la imagen en la estructura de carpetas.
+
+  \item sceneObjets: Este archivo es un módulo de funciones que proporciona diferentes objetos tridimensionales (3D) utilizando la biblioteca Three.js. 
+  Cada función devuelve un objeto con geometría y material específicos.
+
+  \begin{enumerate}
+    \item Sphere: Devuelve una esfera roja con una geometría esférica y un material básico.
+    \item Side: Devuelve un objeto rectangular con una textura proporcionada, usado como pared en la escena.
+    \item Box: Devuelve una caja con una textura proporcionada, usado como UA y Proxy en la escena.
+    \item Wall: Devuelve un plano grande con una textura proporcionada, usado como pantalla en la escena.
+    \item Logo: Devuelve un plano con una textura proporcionada, representando logotipo.
+    \item Floor: Devuelve un plano grande con una textura proporcionada, usado para el suelo de la escena.
+  \end{enumerate}
+
+  Cada función utiliza diferentes geometrías y materiales para crear los objetos 3D. 
+  También configura propiedades específicas de los materiales, como envoltura de textura y repetición.
+  
+  \item jsm: Esta carpeta contiene módulos JavaScript utilizados en el proyecto. Estos módulos son archivos independientes que proporcionan funcionalidades específicas para la aplicación. 
+  Aquí está la estructura de la carpeta:
+
+  \begin{enumerate}
+    \item build: En esta subcarpeta se encuentran los archivos de construcción de la biblioteca Three.js, 
+    que proporcionan la funcionalidad principal de renderización en 3D. El archivo principal utilizado es three.module.js, 
+    que importa todas las funcionalidades esenciales de Three.js.
+    \item webxr: Aquí están los módulos relacionados con WebXR, una API que permite crear experiencias de realidad virtual (VR) y realidad aumentada (AR) en el navegador. 
+    Por ejemplo, VRButton.js proporciona un botón para activar la experiencia de realidad virtual, mientras que XRControllerModelFactory.js 
+    permite crear modelos visuales para los controladores de VR.
+    \item libs: Esta subcarpeta contiene bibliotecas adicionales utilizadas en el proyecto. 
+    En particular, stats.module.js proporciona una herramienta para medir el rendimiento de la aplicación 
+    mediante la visualización de estadísticas, como el número de fotogramas por segundo.
+    \item controls: Aquí están los módulos relacionados con el control de la cámara y la escena en la aplicación. 
+    Por ejemplo, OrbitControls.js proporciona controles para permitir al usuario mover y rotar la cámara 
+    alrededor de la escena, lo que facilita la navegación en entornos 3D.
+  \end{enumerate}
+
+  Por lo tanto, la carpeta 'jsm' organiza los módulos JavaScript utilizados en el proyecto, 
+  proporcionando funcionalidades esenciales, soporte para WebXR, herramientas de medición de rendimiento y controles de cámara. 
+  Estos módulos se importan en la aplicación según sea necesario para agregar las características deseadas.
+
+\end{itemize}
 
 \begin{figure}
   \centering
-  \includegraphics[width=9cm, keepaspectratio]{img/arquitectura.png}
-  \caption{Estructura del parser básico}
+  \includegraphics[width=9cm, keepaspectratio]{img/estructura.png}
+  \caption{Estructura del proyecto}
   \label{fig:arquitectura}
 \end{figure}
 
-
-Por ejemplo, puedes verlo en la figura~\ref{fig:arquitectura}.
-\LaTeX \ pone las figuras donde mejor cuadran. 
-Y eso quiere decir que quizás no lo haga donde lo hemos puesto\ldots 
-Eso no es malo.
-A veces queda un poco raro, pero es la filosofía de \LaTeX: tú al contenido, que yo me encargo de la maquetación.
-
-
- 
-Recuerda que toda figura que añadas a tu memoria debe ser explicada.
-Sí, aunque te parezca evidente lo que se ve en la figura~\ref{fig:arquitectura}, la figura en sí solamente es un apoyo a tu texto.
-Así que explica lo que se ve en la figura, haciendo referencia a la misma tal y como ves aquí.
-Por ejemplo: En la figura~\ref{fig:arquitectura} se puede ver que la estructura del \emph{parser} básico, que consta de seis componentes diferentes: los datos se obtienen de la red, y según el tipo de dato, se pasará a un \emph{parser} específico y bla, bla, bla\ldots
-
-Si utilizas una base de datos, no te olvides de incluir también un diagrama de entidad-relación.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
