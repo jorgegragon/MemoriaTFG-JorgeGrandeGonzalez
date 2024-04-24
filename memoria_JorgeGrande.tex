@@ -533,6 +533,152 @@ El proyecto se estructura en cinco componentes enlazados entre si, representados
 \end{figure}
 
 
+\section{Escena} 
+\label{sec:escena}
+
+La escena virtual implementada se desarrolla utilizando la biblioteca Three.js, 
+que permite la creación de gráficos 3D en un entorno web. Este proyecto configura un entorno interactivo 
+que simula un sistema de comunicación, donde se pueden visualizar los intercambios de mensajes entre diferentes usuarios y un proxy.
+
+\textbf{Estructura Básica}
+
+\begin{itemize}
+  \item \textbf{Cámara y Controles:} La cámara se configura con una perspectiva que permite al usuario tener una vista adecuada del entorno virtual. 
+  Se utiliza OrbitControls para permitir al usuario interactuar con la vista, rotando y acercando/alejando la escena.
+  
+  \item \textbf{Iluminación:} Se añade iluminación hemisférica para simular una luz suave y direccional 
+  para destacar objetos específicos dentro de la escena.
+
+  \item \textbf{Renderizado:} Se establece un renderizado con antialiasing para mejorar la calidad visual de los bordes de los objetos en la escena.
+  
+\end{itemize}
+
+\textbf{Objetos en la Escena}
+
+\begin{itemize}
+  \item \textbf{Suelo y Paredes:} Se utilizan texturas cargadas para crear un suelo y paredes que encierran la escena, proporcionando un fondo estático.
+  
+  \item \textbf{Objetos Interactivos:} Se crean varias cajas y esferas que representan a diferentes usuarios (UA1, UA2) y un proxy. 
+  Estos objetos se pueden interactuar mediante eventos controlados por los controladores de realidad virtual.
+
+  \item \textbf{Indicadores Visuales:} Se utilizan logos y texturas para indicar estados como "start" y "stop", mostrando visualmente el flujo de la simulación.
+  
+\end{itemize}
+
+\textbf{Interacción y Dinámica}
+
+\begin{itemize}
+  \item \textbf{Inicio de Eventos:} La interacción comienza cuando el usuario activa controles específicos en los controladores de realidad virtual. 
+  Esto puede alterar el estado de los objetos (por ejemplo, cambiar el color para indicar actividad) y cambiar texturas que 
+  representan diferentes mensajes enviados y recibidos en la comunicación.
+  
+  \item \textbf{Simulación de Mensajes:} Los objetos esféricos se mueven entre las cajas para simular el envío de mensajes. 
+  La ruta y la dirección de estos objetos dependen de las interacciones del usuario y el flujo del protocolo simulado.
+
+  \item \textbf{Animación de Paquetes RTP:} En ciertos puntos, esferas adicionales se mueven para simular la transmisión de paquetes RTP, 
+  indicando el intercambio de media en una llamada establecida.
+  
+\end{itemize}
+
+
+\textbf{Implementación Técnica}
+
+\begin{itemize}
+  \item \textbf{Controladores XR:} Se configuran controladores para manejar la interacción en un entorno de realidad extendida (XR). 
+  Esto incluye la gestión de eventos de selección y conexión de dispositivos.
+  
+  \item \textbf{Animación y Actualización de la Escena:} Los objetos esféricos se mueven entre las cajas para simular el envío de mensajes. 
+  La ruta y la dirección de estos objetos dependen de las interacciones del usuario y el flujo del protocolo simulado.
+
+  \item \textbf{Animación de Paquetes RTP:} La lógica para mover objetos y actualizar estados se ejecuta dentro de un bucle 
+  de animación que recalcula posiciones y estados basados en la interacción del usuario.
+  
+\end{itemize}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=9cm, keepaspectratio]{img/escena.png}
+  \caption{Escena del proyecto}
+  \label{fig:arquitectura}
+\end{figure}
+
+
+\section{Controles de Realidad Virtual}
+\label{sec:controles_vr}
+
+La implementación de controles de realidad virtual en la aplicación proporciona una interfaz interactiva que mejora significativamente la experiencia del usuario, 
+permitiendo una manipulación intuitiva y directa de la escena virtual.
+
+\subsection{Configuración de los Controladores VR}
+\label{subsec:configuracion_controladores_vr}
+
+Los controladores VR son dispositivos físicos que los usuarios sostienen en sus manos y que detectan sus movimientos y gestos en el espacio tridimensional. 
+Estos están equipados con una variedad de sensores y botones que permiten una gama amplia de interacciones:
+
+\begin{itemize}
+  \item \textbf{Botones y Gatillos}: Utilizados para realizar selecciones y activar eventos dentro de la aplicación. 
+  Por ejemplo, un usuario puede iniciar la transmisión de mensajes al presionar el botón "Start".
+  \item \textbf{Sensores de Movimiento}: Capturan el posicionamiento y la orientación de las manos del usuario, 
+  permitiendo manipular objetos o navegar por la escena con movimientos naturales.
+\end{itemize}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=6cm, keepaspectratio]{img/controlador.png}
+  \caption{Controlador VR}
+  \label{fig:controlador}
+\end{figure}
+
+
+\subsection{Interacción Mediante Controladores VR}
+\label{subsec:interaccion_controladores_vr}
+
+La interacción con la escena se realiza a través de los controladores VR de la siguiente manera:
+
+\begin{itemize}
+  \item \textbf{Selección y Manipulación}: Los usuarios apuntan a objetos virtuales con los controladores y utilizan 
+  botones para seleccionarlos. Esto puede incluye activar elementos dentro de la escena.
+  \item \textbf{Navegación}: Mediante el uso del gatillo en los controladores, 
+  los usuarios pueden desplazarse por la escena virtual, acercándose o alejándose de los objetos o desplazándose lateralmente.
+  \item \textbf{Interacción Contextual}: La aplicación cambia la funcionalidad de la escena 
+  basándose el estado del objeto con el que el usuario está interactuando, 
+  cambiando modos de visualización o ajustando parámetros específicos de los objetos.
+\end{itemize}
+
+\subsection{Implementación Técnica}
+\label{subsec:implementacion_tecnica_vr}
+
+La implementación técnica de los controladores VR en la aplicación utiliza la API de WebXR, integrada con Three.js, para gestionar la entrada 
+de los dispositivos de realidad virtual. El código configura cada controlador para responder a eventos como `selectstart` y `selectend`, 
+lo que permite detectar interacciones como pulsaciones de botones y liberaciones. Adicionalmente, se emplean rayos virtuales (`raycasting`) 
+para determinar qué objetos están siendo apuntados por los controladores, facilitando así una interacción precisa.
+
+
+En la implementación de la aplicación, hacemos un uso específico de los botones trigger de los controladores VR para facilitar una interacción 
+intuitiva y efectiva dentro del entorno virtual. Cada trigger tiene un propósito bien definido que mejora la experiencia del 
+usuario y la funcionalidad de la aplicación:
+
+\begin{itemize}
+  \item \textbf{Trigger del Controlador Izquierdo}: Este botón se utiliza para la navegación dentro de la escena. Al presionar el trigger del controlador izquierdo, 
+  el usuario puede desplazarse hacia donde esté mirando con las gafas de realidad virtual, lo que permite una navegación intuitiva y natural. 
+  Esta funcionalidad es fundamental para explorar diferentes áreas de la escena de manera fluida.
+  
+  \item \textbf{Trigger del Controlador Derecho}: El trigger del controlador derecho está configurado para interactuar con objetos 
+  específicos de la escena. Cuando se presiona este botón, se puede seleccionar o activar elementos dentro de la escena, 
+  como iniciar una simulación, modificar parámetros de un objeto, o ejecutar acciones específicas relacionadas con los objetos con los que se interactúa. 
+  Esta interacción es esencial para manipular elementos de la aplicación y para participar activamente en las simulaciones y demostraciones que se presentan en el entorno virtual.
+\end{itemize}
+
+La programación de estos triggers se realiza a través del manejo de eventos en JavaScript, utilizando la API de WebXR para detectar y responder 
+a las acciones del usuario. Este diseño permite un control preciso sobre la aplicación, ofreciendo a los usuarios una manera clara y directa 
+de interactuar con la interfaz y con los elementos virtuales de la escena.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=6cm, keepaspectratio]{img/BotonesControlador.png}
+  \caption{Botones controlador VR}
+  \label{fig:controladorBotones}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
