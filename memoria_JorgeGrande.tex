@@ -703,9 +703,56 @@ Incluye también los resultados de validación que permiten afirmar que tus resu
 \chapter{Resultados}
 \label{chap:resultados}
 
-En este capítulo se incluyen los resultados de tu trabajo fin de grado.
+En este capítulo, se presentan los resultados derivados de las interacciones con los objetos de la escena en la aplicación 
+de realidad virtual desarrollada. Se describirá cómo distintas selecciones de objetos generan resultados visuales y 
+funcionales diferentes, lo que demuestra la dinámica y la reactividad de la aplicación ante las acciones del usuario.
 
-Si es una herramienta de análisis lo que has realizado, aquí puedes poner ejemplos de haberla utilizado para que se vea su utilidad.
+\section{Descripción de las Interacciones}
+\label{sec:descripcion_interacciones}
+Las interacciones en la aplicación permiten a los usuarios seleccionar objetos virtuales, 
+los cuales alteran el estado de la escena y desencadenan eventos específicos. 
+
+Como se mencionó en la Sección 4.3.3, para lograr estos resultados es necesario utilizar controladores VR. 
+Estos dispositivos permiten a los usuarios moverse por la escena e interactuar con los objetos de manera intuitiva y efectiva.
+La selección se realiza apuntando hacia el objeto con el controlador derecho y activando el trigger.
+
+Cada objeto tiene asociadas consecuencias específicas que se detallan a continuación:
+
+\subsection{Interacción con UA1}
+\label{subsec:objeto_ua1}
+
+Este objeto representa un usuario dentro del entorno virtual y está visualizado como una caja 
+de madera ubicada en la parte izquierda de la escena.
+
+Al interactuar con UA1, se pueden obtener dos posibles resultados, los cuales dependen 
+de si el intercambio de paquetes ha sido inicializado o no.
+
+\paragraph{Intercambio de paquetes no iniciado}
+Si el intercambio de paquetes no ha sido inicializado, en la pantalla situada en la pared central se mostrarán 
+los atributos del usuario en estado vacío, indicando los valores que deberían ser completados. 
+Esta visualización es esencial para comprender los requisitos iniciales de configuración del usuario en la red.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=6cm, keepaspectratio]{img/resultados/UA1_NoIniciado.png}
+  \caption{Atributos UA1 vacíos}
+  \label{fig:UA1_NoIniciado}
+\end{figure}
+
+
+\paragraph{Intercambio de paquetes iniciado}
+Una vez que el intercambio de paquetes ha sido iniciado, en la misma pantalla se 
+actualizarán los atributos del usuario con valores específicos y correctos para su funcionamiento. 
+Este cambio refleja cómo el sistema procesa y responde a las interacciones, ofreciendo un feedback visual del estado operativo del usuario.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=6cm, keepaspectratio]{img/resultados/UA1_NoIniciado.png}
+  \caption{Atributos UA1 con valores específicos}
+  \label{fig:UA1_Iniciado}
+\end{figure}
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
