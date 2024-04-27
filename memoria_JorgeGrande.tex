@@ -730,13 +730,22 @@ de si el intercambio de paquetes ha sido inicializado o no.
 \subsubsection{Intercambio de paquetes no iniciado}
 \label{subsubsec:Intercambio_NoIniciado}
 Si el intercambio de paquetes no ha sido inicializado, en la pantalla situada en la pared central se mostrarán 
-los atributos del usuario en estado vacío, indicando los valores que deberían ser completados. 
-Esta visualización es esencial para comprender los requisitos iniciales de configuración del usuario en la red.
+los atributos del usuario en estado vacío, indicando los valores que deberían ser completados, mostrados en la figura~\ref{fig:UA1_NoIniciado}. 
+Esta visualización es esencial para comprender los requisitos iniciales de configuración del usuario en la red. Estos tributos son:
+
+\begin{itemize}
+  \item \textbf{'account'}: ['username', 'passwd']
+  \item \textbf{'uaserver'}: ['ip', 'puerto']
+  \item \textbf{'rtpaudio'}: ['puerto']
+  \item \textbf{'regproxy'}: ['ip', 'puerto']
+  \item \textbf{'log'}: ['path']
+  \item \textbf{'audio'}: ['path']
+\end{itemize}
 
 \begin{figure}
   \centering
   \includegraphics[width=15cm, keepaspectratio]{img/resultados/UA1_NoIniciado.png}
-  \caption{Atributos UA1 vacíos}
+  \caption{Estado inicial del UA1}
   \label{fig:UA1_NoIniciado}
 \end{figure}
 
@@ -744,7 +753,7 @@ Esta visualización es esencial para comprender los requisitos iniciales de conf
 \subsubsection{Intercambio de paquetes iniciado}
 \label{subsubsec:Intercambio_Iniciado}
 Una vez que el intercambio de paquetes ha sido iniciado, en la misma pantalla se 
-actualizarán los atributos del usuario con valores específicos y correctos para su funcionamiento. 
+actualizarán los atributos del usuario con valores específicos y correctos para su funcionamiento mostrados en la figura~\ref{fig:UA1_Iniciado}.  
 Este cambio refleja cómo el sistema procesa y responde a las interacciones, ofreciendo un feedback visual del estado operativo del usuario.
 
 \begin{figure}
@@ -755,7 +764,112 @@ Este cambio refleja cómo el sistema procesa y responde a las interacciones, ofr
 \end{figure}
 
 
+\subsection{Interacción con el Proxy}
+\label{subsec:objeto_proxy}
 
+Este objeto representa un servidor proxy en el entorno virtual y está visualizado como una caja con textura oscura,
+ubicada en la parte central de la escena.
+
+Al interactuar con el Proxy, este cambiará de color y dependiendo del estado de la interacción con los usuarios (UA1 y UA2), 
+se pueden obtener diferentes resultados, influenciados por si el intercambio de paquetes ha sido iniciado o no.
+
+\subsubsection{Intercambio de paquetes no iniciado}
+\label{subsubsec:Proxy_Intercambio_NoIniciado}
+Si el intercambio de paquetes no ha sido inicializado, la interacción con el Proxy mostrará en la pantalla sus atributos 
+con la información que deben ser completados, donde no se procesan aún los paquetes, mostrados en la figura~\ref{fig:Proxy_NoIniciado}. Estos campos son:
+
+\begin{itemize}
+  \item \textbf{'server'}: ['name', 'ip', 'puerto']
+  \item \textbf{'database'}: ['path', 'passwdpath']
+  \item \textbf{'log'}: ['path']
+\end{itemize}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=15cm, keepaspectratio]{img/resultados/Proxy_NoIniciado.png}
+  \caption{Estado inicial del Proxy}
+  \label{fig:Proxy_NoIniciado}
+\end{figure}
+
+\subsubsection{Intercambio de paquetes iniciado}
+\label{subsubsec:Proxy_Intercambio_Iniciado}
+Una vez que el intercambio de paquetes ha sido iniciado, el Proxy procesará y dirigirá los paquetes entre los usuarios correspondientes, 
+reflejando este flujo en la interfaz con actualizaciones dinámicas. Al seleccionar el Proxy se mostrarán sus atributos con valores específicos 
+y correctos para su funcionamiento, mostrados en la figura~\ref{fig:Proxy_Iniciado}.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=15cm, keepaspectratio]{img/resultados/Proxy_Iniciado.png}
+  \caption{Atributos Proxy con valores específicos}
+  \label{fig:Proxy_Iniciado}
+\end{figure}
+
+
+\subsection{Interacción con UA2}
+\label{subsec:objeto_ua1}
+
+Este objeto representa un usuario dentro del entorno virtual y está visualizado como una caja 
+de madera ubicada en la parte derecha de la escena.
+
+Al interactuar con UA2, este cambiará de color y podrán obtener dos posibles resultados, los cuales dependen 
+de si el intercambio de paquetes ha sido inicializado o no.
+
+\subsubsection{Intercambio de paquetes no iniciado}
+\label{subsubsec:Intercambio_NoIniciado}
+Si el intercambio de paquetes no ha sido inicializado, en la pantalla situada en la pared central se mostrarán 
+los atributos del usuario en estado vacío, indicando los valores que deberían ser completados, mostrados en la figura~\ref{fig:UA2_NoIniciado}. 
+Esta visualización es esencial para comprender los requisitos iniciales de configuración del usuario en la red. Estos tributos son:
+
+\begin{itemize}
+  \item \textbf{'account'}: ['username', 'passwd']
+  \item \textbf{'uaserver'}: ['ip', 'puerto']
+  \item \textbf{'rtpaudio'}: ['puerto']
+  \item \textbf{'regproxy'}: ['ip', 'puerto']
+  \item \textbf{'log'}: ['path']
+  \item \textbf{'audio'}: ['path']
+\end{itemize}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=15cm, keepaspectratio]{img/resultados/UA2_NoIniciado.png}
+  \caption{Estado inicial del UA2}
+  \label{fig:UA2_NoIniciado}
+\end{figure}
+
+
+\subsubsection{Intercambio de paquetes iniciado}
+\label{subsubsec:Intercambio_Iniciado}
+Una vez que el intercambio de paquetes ha sido iniciado, en la misma pantalla se 
+actualizarán los atributos del usuario con valores específicos y correctos para su funcionamiento mostrados en la figura~\ref{fig:UA2_Iniciado}.  
+Este cambio refleja cómo el sistema procesa y responde a las interacciones, ofreciendo un feedback visual del estado operativo del usuario.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=15cm, keepaspectratio]{img/resultados/UA2_Iniciado.png}
+  \caption{Atributos UA2 con valores específicos}
+  \label{fig:UA1_Iniciado}
+\end{figure}
+
+
+\subsection{Interacción con paquetes}
+\label{subsec:objeto_paquetes}
+En el entorno de realidad virtual, los paquetes se representan en forma de esferas que simulan la transmisión de datos en una red. 
+Estas esferas visualizan claramente el flujo de información, con un origen, un destino y un color claramente definidos, 
+dependiendo del tipo de intercambio en el que participan.
+
+Al seleccionar uno de estos paquetes, el sistema mostrará información detallada contenida en el paquete, 
+incluyendo una representación visual del flujo de transmisión que indica su origen, destino y la dirección del flujo.
+
+El proceso y secuencia de intercambio de paquetes en este proyecto se ilustra en la siguiente figura~\ref{fig:Secuencia_Paquetes}, donde se puede observar el orden 
+específico seguido durante las simulaciones.
+
+
+\begin{figure}
+  \centering
+  \includegraphics[width=18cm, keepaspectratio]{img/resultados/Secuencia_Paquetes.png}
+  \caption{Secuencia del intercambio de paquetes}
+  \label{fig:Secuencia_Paquetes}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
