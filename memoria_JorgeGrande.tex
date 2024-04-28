@@ -60,7 +60,7 @@ GRADO EN INGENIERIA EN SISTEMAS AUDIOVISUALES Y MULTIMEDIA
 
 \vspace{1cm}
 \LARGE
-\textbf{TRABAJO FIN DE GRADO/MÁSTER}
+\textbf{TRABAJO FIN DE GRADO}
 
 \vspace{2cm}
 
@@ -109,7 +109,7 @@ Entorno Inmersivo 3D con Tecnologías Web
 \end{center}
 
 \vspace{1cm}
-La defensa del presente Proyecto Fin de Carrera se realizó el día \qquad$\;\,$ de \qquad\qquad\qquad\qquad \newline de 202X, siendo calificada por el siguiente tribunal:
+La defensa del presente Proyecto Fin de Carrera se realizó el día \qquad$\;\,$ de \qquad\qquad\qquad\qquad \newline de 2024, siendo calificada por el siguiente tribunal:
 
 
 \vspace{0.5cm}
@@ -131,7 +131,7 @@ y habiendo obtenido la siguiente calificación:
 
 \vspace{1cm}
 \begin{flushright}
-Fuenlabrada, a \qquad$\;\,$ de \qquad\qquad\qquad\qquad de 202X
+Fuenlabrada, a \qquad$\;\,$ de \qquad\qquad\qquad\qquad de 2024
 \end{flushright}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -215,124 +215,55 @@ As it is the translation of the ``Resumen'', which is supposed to be written at 
 \chapter{Introducción}
 \label{sec:intro} % etiqueta para poder referenciar luego en el texto con ~\ref{sec:intro}
 \pagenumbering{arabic} % para empezar la numeración de página con números
+En la era de la transformación digital, las comunicaciones interactivas han evolucionado significativamente, 
+incorporando tecnologías inmersivas como la realidad virtual (RV) para ofrecer experiencias más enriquecedoras y colaborativas. 
 
-En este capítulo se introduce el proyecto.
-Debería tener información general sobre el mismo, dando la información sobre el contexto en el que se ha desarrollado.
+\bigskip
 
-No te olvides de echarle un ojo a la página con los cinco errores de escritura más frecuentes\footnote{\url{http://www.tallerdeescritores.com/errores-de-escritura-frecuentes}}.
+Este Trabajo de Fin de Grado se centra en el desarrollo e implementación de un sistema de comunicación dentro de un entorno de realidad virtual, 
+destacando la aplicación práctica y la comprensión de los protocolos de comunicación estándar, 
+como el Protocolo de Inicio de Sesión (SIP) y el Protocolo de Transporte en Tiempo Real (RTP).
 
-Aconsejo a todo el mundo que mire y se inspire en memorias pasadas.
-Las memorias de los proyectos que he llevado yo están (casi) todas almacenadas en mi web del GSyC\footnote{\url{https://gsyc.urjc.es/~grex/pfcs/}}.
+\bigskip
 
-En mayo de 2023 me apunté a un curso de innovación docente donde nos pidieron hacer un podcast con temática docente. Aproveché entonces para hacer un podcast de unos 30 minutos donde en los primeros quince minutos introducía LaTeX y la memoria, y en los segundos hacía hincapién en aquellas cosas que más os cuestan utilizar en la memoria: las figuras, las tablas y las citas. Podéis escuchar el podcast en Internet\footnote{\url{https://podcasters.spotify.com/pod/show/gregorio-robles9/episodes/Tu-memoria-de-Trabajo-Fin-de-Grado-o-de-Mster-en-LaTeX-e23hucr/a-a58kp2}}.
+La motivación detrás de este proyecto surge de la necesidad de comprender mejor las complejidades de la señalización y 
+el manejo de medios en las comunicaciones actuales, y cómo estas pueden ser simuladas y visualizadas en un entorno de realidad virtual. 
+A través de la creación de un modelo interactivo, este trabajo pretende proporcionar una herramienta educativa y un medio de 
+investigación que permita a los usuarios experimentar de manera tangible el flujo y la gestión de los datos de comunicación.
 
+\bigskip
 
-\section{Sección}
-\label{sec:seccion}
-
-Esto es una sección, que es una estructura menor que un capítulo. 
-
-Por cierto, a veces me comentáis que no os compila por las tildes.
-Eso es un problema de codificación.
-Al guardar el archivo, guardad la codificación de ``ISO-Latin-1'' a ``UTF-8'' (o viceversa) y funcionará.
-
-\subsection{Estilo}
-\label{subsec:estilo}
-
-Recomiendo leer los consejos prácticos sobre escribir documentos científicos en \LaTeX \ de Diomidis Spinellis\footnote{\url{https://github.com/dspinellis/latex-advice}}.
-
-Lee sobre el uso de las comas\footnote{\url{http://narrativabreve.com/2015/02/opiniones-de-un-corrector-de-estilo-11-recetas-para-escribir-correctamente-la-coma.html}}. 
-Las comas en español no se ponen al tuntún.
-Y nunca, nunca entre el sujeto y el predicado (p.ej. en ``Yo, hago el TFG'' sobre la coma).
-La coma no debe separar el sujeto del predicado en una oración, pues se cortaría la secuencia natural del discurso.
-No se considera apropiado el uso de la llamada coma respiratoria o \emph{coma criminal}.
-Solamente se suele escribir una coma para marcar el lugar que queda cuando omitimos el verbo de una oración, pero es un caso que se da de manera muy infrecuente al escribir un texto científico (p.ej. ``El Real Madrid, campeón de Europa'').
-
-A continuación, viene una figura, la Figura~\ref{figura:foro_hilos}. 
-Observarás que el texto dentro de la referencia es el identificador de la figura (que se corresponden con el ``label'' dentro de la misma). 
-También habrás tomado nota de cómo se ponen las ``comillas dobles'' para que se muestren correctamente. 
-Nota que hay unas comillas de inicio (``) y otras de cierre (''), y que son diferentes.
-Volviendo a las referencias, nota que al compilar, la primera vez se crea un diccionario con las referencias, y en la segunda compilación se ``rellenan'' estas referencias. 
-Por eso hay que compilar dos veces tu memoria.
-Si no, no se crearán las referencias.
-
-
-
- \begin{figure}
-    \centering
-    \includegraphics[bb=0 0 800 600, width=12cm, keepaspectratio]{img/foro1}
-    \caption{Página con enlaces a hilos}
-    \label{figura:foro_hilos}
- \end{figure}
-
-
-A continuación un bloque ``verbatim'', que se utiliza para mostrar texto tal cual.
-Se puede utilizar para ofrecer el contenido de correos electrónicos, código, entre otras cosas.
-
-
-{\footnotesize
-\begin{verbatim}
-    From gaurav at gold-solutions.co.uk  Fri Jan 14 14:51:11 2005
-    From: gaurav at gold-solutions.co.uk (gaurav_gold)
-    Date: Fri Jan 14 19:25:51 2005
-    Subject: [Mailman-Users] mailman issues
-    Message-ID: <003c01c4fa40$1d99b4c0$94592252@gaurav7klgnyif>
-
-    Dear Sir/Madam,
-    How can people reply to the mailing list?  How do i turn off
-    this feature? How can i also enable a feature where if someone
-    replies the newsletter the email gets deleted?
-    Thanks
-
-    From msapiro at value.net  Fri Jan 14 19:48:51 2005
-    From: msapiro at value.net (Mark Sapiro)
-    Date: Fri Jan 14 19:49:04 2005
-    Subject: [Mailman-Users] mailman issues
-    In-Reply-To: <003c01c4fa40$1d99b4c0$94592252@gaurav7klgnyif>
-    Message-ID: <PC173020050114104851057801b04d55@msapiro>
-
-    gaurav_gold wrote:
-    >How can people reply to the mailing list?  How do i turn off
-    this feature? How can i also enable a feature where if someone
-    replies the newsletter the email gets deleted?
-
-    See the FAQ
-    >Mailman FAQ: http://www.python.org/cgi-bin/faqw-mm.py
-    article 3.11
-\end{verbatim}
-}
-
+Con el uso de la realidad virtual, se espera no solo proporcionar una comprensión más profunda de estos protocolos sino también explorar 
+las posibilidades que la realidad virtual tiene para ofrecer en términos de aprendizaje interactivo y simulación.
 
 
 \section{Estructura de la memoria}
 \label{sec:estructura}
-
-
-\begin{figure}
-  \centering
-  \includegraphics[width=9cm, keepaspectratio]{img/arquitectura.png}
-  \caption{Estructura del parser básico}
-  \label{fig:arquitectura}
-\end{figure}
-
-
-
-
-En esta sección se debería introducir la estructura de la memoria. 
-
-Así:
-
+Esta sección describe la estructura organizativa de la memoria, proporcionando una visión 
+general de cada uno de los capítulos principales que componen este trabajo de fin de grado. 
+La estructura está diseñada para desarrollar gradualmente el tema, desde la introducción y 
+los fundamentos teóricos hasta la implementación práctica y la evaluación de los resultados.
 
 \begin{itemize}
-  \item En el primer capítulo se hace una intro al proyecto.
+  \item \textbf{Capítulo 1: Introducción} - Se presenta una introducción general al proyecto, estableciendo el contexto y 
+  la motivación del estudio.
   
-  \item En el capítulo~\ref{chap:objetivos} (ojo, otra referencia automática) se muestran los objetivos del proyecto.
+  \item \textbf{Capítulo~\ref{chap:objetivos}: Objetivos} - Detalla los objetivos generales y específicos que guían el desarrollo del proyecto.
   
-  \item A continuación se presenta el estado del arte en el capítulo~\ref{chap:estado}.
+  \item \textbf{Capítulo~\ref{chap:estado}: Estado del Arte} - Se comentan todas las tecnologías, herramientas y accesorios necesarios
+ para el desarrollo y funcionamiento de este proyecto.
   
-  \item \ldots
+  \item \textbf{Capítulo~\ref{chap:diseno}: Diseño e implementación} - Describe los métodos utilizados para desarrollar el sistema de comunicación, 
+  incluyendo el diseño, las herramientas y tecnologías empleadas.
+  
+  \item \textbf{Capítulo~\ref{chap:resultados}: Resultados} - Presenta los resultados obtenidos a través de la implementación del sistema.
+  
+  \item \textbf{Capítulo~\ref{chap:conclusiones}: Conclusiones} - Ofrece un desarrollo de las conclusiones extraídas y 
+  las recomendaciones para investigaciones futuras.
 \end{itemize}
 
+Cada capítulo está diseñado para construir sobre la información presentada en los anteriores, asegurando un 
+flujo lógico y coherente a lo largo de la memoria.
 
 
 
@@ -349,17 +280,29 @@ Así:
 \section{Objetivo general} % título de sección (se muestra)
 \label{sec:objetivo-general} % identificador de sección (no se muestra, es para poder referenciarla)
 
-Aquí vendría el objetivo general en una frase:
-Mi trabajo fin de grado consiste en crear de una herramienta de análisis de los comentarios jocosos en repositorios de software libre alojados en la plataforma GitHub.
-
-Recuerda que los objetivos siempre vienen en infinitivo.
+El objetivo principal es construir una representación visual y funcional de los flujos de señalización y 
+datos utilizando la biblioteca de JavaScript Three.js, junto con tecnologías de RV para facilitar la interacción con la simulación. 
+Se busca demostrar cómo se inicia, se mantiene y se termina una sesión de comunicación, siguiendo los estándares del protocolo SIP, 
+y cómo los paquetes RTP son utilizados para el intercambio efectivo de datos multimedia.
 
 
 \section{Objetivos específicos}
 \label{sec:objetivos-especificos}
+Para cumplir con el objetivo general de desarrollar una representación visual y funcional de los flujos de señalización 
+y datos en un entorno de realidad virtual, se establecen los siguientes objetivos específicos:
 
-Los objetivos específicos se pueden entender como las tareas en las que se ha desglosado el objetivo general.
-Y, sí, también vienen en infinitivo.
+\begin{enumerate}
+\item Diseñar e implementar un modelo virtual en 3D que simule el entorno de una red de comunicaciones, empleando la biblioteca Three.js.
+\item Integrar tecnologías de realidad virtual para facilitar una experiencia inmersiva y 
+la interacción del usuario con el modelo de simulación.
+\item Desarrollar una interfaz de usuario que permita la visualización y manipulación de los procesos de 
+señalización y transmisión de datos, acorde con el protocolo SIP.
+\item Implementar la lógica para simular el flujo de mensajes SIP, incluyendo el registro de usuarios, la iniciación y 
+recepción de llamadas.
+\item Simular la transmisión de datos multimedia a través de paquetes RTP, mostrando la secuencia de envío y recepción en tiempo real.
+\item Crear un sistema de retroalimentación visual que indique el estado de las comunicaciones, incluyendo errores y mensajes de confirmación.
+\end{enumerate}
+
 
 
 \section{Planificación temporal}
@@ -379,18 +322,18 @@ Lo importante es que quede claro cuánto tiempo llevas (tiempo natural, p.ej., 6
 \chapter{Estado del arte}
 \label{chap:estado}
 
-En este capítulo se explicarán todas las tecnologías, herramientas y accesorios necesarios para el desarrollo y funcionamiento de este proyecto.
+En este capítulo se explicarán todas las tecnologías, herramientas y accesorios necesarios para el desarrollo.
 
 
 \section{Lenguajes de Marcado y Programación} 
 \label{sec:lenguajes}
 
 \begin{itemize}
-  \item HTML: Lenguaje estándar para crear páginas web, define la estructura y el contenido utilizando etiquetas.
+  \item \textbf{HTML:} Lenguaje estándar para crear páginas web, define la estructura y el contenido utilizando etiquetas.
   
-  \item JavaScript: Lenguaje de programación utilizado en desarrollo web para agregar interactividad y dinamismo a las páginas.
+  \item \textbf{JavaScript:} Lenguaje de programación utilizado en desarrollo web para agregar interactividad y dinamismo a las páginas.
   
-  \item TeX: Sistema de composición tipográfica utilizado principalmente para la creación de documentos científicos y técnicos de alta calidad.
+  \item \textbf{TeX:} Sistema de composición tipográfica utilizado principalmente para la creación de documentos científicos y técnicos de alta calidad.
   
 \end{itemize}
 
@@ -406,16 +349,16 @@ En este capítulo se explicarán todas las tecnologías, herramientas y accesori
 \label{sec:importaciones}
 
 \begin{itemize}
-  \item THREE.js: Biblioteca JavaScript de código abierto para crear y renderizar gráficos en 3D en el navegador web.
+  \item \textbf{THREE.js:} Biblioteca JavaScript de código abierto para crear y renderizar gráficos en 3D en el navegador web.
   
-  \item VRButton.js: Módulo de Three.js que facilita la integración de botones para activar la funcionalidad de realidad virtual (VR) en aplicaciones web.
+  \item \textbf{VRButton.js:} Módulo de Three.js que facilita la integración de botones para activar la funcionalidad de realidad virtual (VR) en aplicaciones web.
   
-  \item XRControllerModelFactory.js: Módulo de Three.js que proporciona una fábrica para crear modelos de controladores de realidad extendida (XR) para 
+  \item \textbf{XRControllerModelFactory.js:} Módulo de Three.js que proporciona una fábrica para crear modelos de controladores de realidad extendida (XR) para 
   su uso en aplicaciones de realidad virtual y aumentada.
 
-  \item Stats.js: Módulo de Three.js que ofrece una utilidad para monitorear el rendimiento (FPS, uso de memoria) de aplicaciones web 3D en tiempo real.
+  \item \textbf{Stats.js:} Módulo de Three.js que ofrece una utilidad para monitorear el rendimiento (FPS, uso de memoria) de aplicaciones web 3D en tiempo real.
   
-  \item OrbitControls.js: Módulo de Three.js que proporciona controles de órbita para permitir al usuario rotar, acercar y alejar la cámara en una escena 3D de manera interactiva.
+  \item \textbf{OrbitControls.js:} Módulo de Three.js que proporciona controles de órbita para permitir al usuario rotar, acercar y alejar la cámara en una escena 3D de manera interactiva.
   
 \end{itemize}
 
@@ -424,18 +367,18 @@ En este capítulo se explicarán todas las tecnologías, herramientas y accesori
 \label{sec:herramientas}
 
 \begin{itemize}
-  \item FireFox: Navegador web de código abierto conocido por su enfoque en la privacidad y la personalización.
+  \item \textbf{FireFox:} Navegador web de código abierto conocido por su enfoque en la privacidad y la personalización.
   
-  \item VisualStudioCode: Editor de código fuente de Microsoft altamente personalizable y de código abierto, conocido 
+  \item \textbf{VisualStudioCode:} Editor de código fuente de Microsoft altamente personalizable y de código abierto, conocido 
   por su rendimiento y amplia gama de extensiones.
   
-  \item GitHub: Plataforma de desarrollo colaborativo de software basada en la nube, que permite a los desarrolladores alojar, revisar, 
+  \item \textbf{GitHub:} Plataforma de desarrollo colaborativo de software basada en la nube, que permite a los desarrolladores alojar, revisar, 
   colaborar y desplegar proyectos de software, incluidas aplicaciones web, de manera eficiente y transparente.
 
-  \item Oculus Quest 2: Gafas de realidad virtual autónomas producidas por Oculus (una subsidiaria de Facebook), conocidas 
+  \item \textbf{Oculus Quest 2:} Gafas de realidad virtual autónomas producidas por Oculus (una subsidiaria de Facebook), conocidas 
   por su alta calidad y facilidad de uso. Estas gafas fueron proporcionadas por la universidad para el desarrollo del proyecto.
   
-  \item Web XR API Emulator: Herramienta de desarrollo que permite probar y depurar experiencias de realidad virtual y aumentada 
+  \item \textbf{Web XR API Emulator:} Herramienta de desarrollo que permite probar y depurar experiencias de realidad virtual y aumentada 
   basadas en WebXR directamente en el navegador web. 
   
 \end{itemize}
@@ -448,7 +391,7 @@ En este capítulo se explicarán todas las tecnologías, herramientas y accesori
 
 \cleardoublepage
 \chapter{Diseño e implementación}
-\label{sec:diseno}
+\label{chap:diseno}
 
 En este capítulo, se detalla el desarrollo del proyecto, incluyendo su estructura, los componentes en el entorno 
 inmersivo, su funcionamiento, y las interacciones implementadas.
@@ -467,7 +410,7 @@ El proyecto se estructura en cinco componentes enlazados entre si, representados
   
   Este archivo proporciona una base para el desarrollo de aplicaciones de realidad virtual en la web.
   
-  \item app.js: Este script es una aplicación que utiliza la biblioteca Three.js para crear una escena 3D interactiva. Que realiza:
+  \item \textbf{app.js:} Este script es una aplicación que utiliza la biblioteca Three.js para crear una escena 3D interactiva. Que realiza:
     
     \begin{enumerate}
       \item Importa las bibliotecas necesarias de Three.js para crear la escena.
@@ -480,41 +423,41 @@ El proyecto se estructura en cinco componentes enlazados entre si, representados
       \item Y finalmente, tenemos un método de renderizado que se ejecuta en bucle y actualiza la escena en cada fotograma.
     \end{enumerate}
 
-  \item imágenes: En la arquitectura del proyecto, tenemos una carpeta llamada "imagenes" que contiene todas las imágenes utilizadas en la aplicación. 
+  \item \textbf{imágenes:} En la arquitectura del proyecto, tenemos una carpeta llamada "imagenes" que contiene todas las imágenes utilizadas en la aplicación. 
   Dentro de esta carpeta, tenemos subcarpetas para organizar las imágenes de acuerdo con su propósito.
 
   Cada imagen se carga en la aplicación utilizando el constructor THREE.TextureLoader().load(), 
   proporcionando la ruta relativa desde el punto donde se está ejecutando el código hacia la ubicación de la imagen en la estructura de carpetas.
 
-  \item sceneObjets: Este archivo es un módulo de funciones que proporciona diferentes objetos tridimensionales (3D) utilizando la biblioteca Three.js. 
+  \item \textbf{sceneObjets:} Este archivo es un módulo de funciones que proporciona diferentes objetos tridimensionales (3D) utilizando la biblioteca Three.js. 
   Cada función devuelve un objeto con geometría y material específicos.
 
   \begin{enumerate}
-    \item Sphere: Devuelve una esfera roja con una geometría esférica y un material básico.
-    \item Side: Devuelve un objeto rectangular con una textura proporcionada, usado como pared en la escena.
-    \item Box: Devuelve una caja con una textura proporcionada, usado como UA y Proxy en la escena.
-    \item Wall: Devuelve un plano grande con una textura proporcionada, usado como pantalla en la escena.
-    \item Logo: Devuelve un plano con una textura proporcionada, representando logotipo.
-    \item Floor: Devuelve un plano grande con una textura proporcionada, usado para el suelo de la escena.
+    \item \textbf{Sphere:} Devuelve una esfera roja con una geometría esférica y un material básico.
+    \item \textbf{Side:} Devuelve un objeto rectangular con una textura proporcionada, usado como pared en la escena.
+    \item \textbf{Box:} Devuelve una caja con una textura proporcionada, usado como UA y Proxy en la escena.
+    \item \textbf{Wall:} Devuelve un plano grande con una textura proporcionada, usado como pantalla en la escena.
+    \item \textbf{Logo:} Devuelve un plano con una textura proporcionada, representando logotipo.
+    \item \textbf{Floor:} Devuelve un plano grande con una textura proporcionada, usado para el suelo de la escena.
   \end{enumerate}
 
   Cada función utiliza diferentes geometrías y materiales para crear los objetos 3D. 
   También configura propiedades específicas de los materiales, como envoltura de textura y repetición.
   
-  \item jsm: Esta carpeta contiene módulos JavaScript utilizados en el proyecto. Estos módulos son archivos independientes que proporcionan funcionalidades específicas para la aplicación. 
+  \item \textbf{jsm:} Esta carpeta contiene módulos JavaScript utilizados en el proyecto. Estos módulos son archivos independientes que proporcionan funcionalidades específicas para la aplicación. 
   Aquí está la estructura de la carpeta:
 
   \begin{enumerate}
-    \item build: En esta subcarpeta se encuentran los archivos de construcción de la biblioteca Three.js, 
+    \item \textbf{build:} En esta subcarpeta se encuentran los archivos de construcción de la biblioteca Three.js, 
     que proporcionan la funcionalidad principal de renderización en 3D. El archivo principal utilizado es three.module.js, 
     que importa todas las funcionalidades esenciales de Three.js.
-    \item webxr: Aquí están los módulos relacionados con WebXR, una API que permite crear experiencias de realidad virtual (VR) y realidad aumentada (AR) en el navegador. 
+    \item \textbf{webxr:} Aquí están los módulos relacionados con WebXR, una API que permite crear experiencias de realidad virtual (VR) y realidad aumentada (AR) en el navegador. 
     Por ejemplo, VRButton.js proporciona un botón para activar la experiencia de realidad virtual, mientras que XRControllerModelFactory.js 
     permite crear modelos visuales para los controladores de VR.
-    \item libs: Esta subcarpeta contiene bibliotecas adicionales utilizadas en el proyecto. 
+    \item \textbf{libs:} Esta subcarpeta contiene bibliotecas adicionales utilizadas en el proyecto. 
     En particular, stats.module.js proporciona una herramienta para medir el rendimiento de la aplicación 
     mediante la visualización de estadísticas, como el número de fotogramas por segundo.
-    \item controls: Aquí están los módulos relacionados con el control de la cámara y la escena en la aplicación. 
+    \item \textbf{controls:} Aquí están los módulos relacionados con el control de la cámara y la escena en la aplicación. 
     Por ejemplo, OrbitControls.js proporciona controles para permitir al usuario mover y rotar la cámara 
     alrededor de la escena, lo que facilita la navegación en entornos 3D.
   \end{enumerate}
@@ -679,19 +622,6 @@ de interactuar con la interfaz y con los elementos virtuales de la escena.
   \caption{Botones controlador VR}
   \label{fig:controladorBotones}
 \end{figure}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% EXPERIMENTOS Y VALIDACIÓN %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\cleardoublepage
-\chapter{Experimentos y validación}
-\label{chap:experimentos}
-
-Este capítulo se introdujo como requisito en 2019. 
-Describe los experimentos y casos de test que tuviste que implementar para validar tus resultados. 
-Incluye también los resultados de validación que permiten afirmar que tus resultados son correctos. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -869,7 +799,7 @@ pasando por un proceso de registro y luego de llamada.
 
 \begin{figure}
   \centering
-  \includegraphics[width=18cm, keepaspectratio]{img/resultados/Secuencia_Paquetes.png}
+  \includegraphics[width=15cm, keepaspectratio]{img/resultados/Secuencia_Paquetes.png}
   \caption{Secuencia del intercambio de paquetes}
   \label{fig:Secuencia_Paquetes}
 \end{figure}
@@ -877,64 +807,67 @@ pasando por un proceso de registro y luego de llamada.
 \subsubsection{Desglose de la Secuencia de Comunicación}
 \label{subsubsec:secuencia_comunicación}
 
-Inicialmente, el proceso comienza con un intento de registro, donde el usuario A (UA1) envía un mensaje "REGISTER" al servidor, 
+Inicialmente, el proceso comienza con un intento de registro, donde el usuario A (UA1) envía un mensaje REGISTER al servidor, 
 representado en la figura~\ref{fig:01-Register_UA1}. 
-Si no está autorizado, recibe un "401 Unauthorized", mostrado en la figura~\ref{fig:02-Unauthorized}, 
-lo que obliga al usuario (UA1) a realizar otro intento de "REGISTER", el cual, es aceptado,
-y se confirma con una respuesta "200 OK", ilustrado en la figura~\ref{fig:02-200OK}, 
+Si no está autorizado, recibe un 401 Unauthorized, mostrado en la figura~\ref{fig:02-Unautorized}, 
+lo que obliga al usuario (UA1) a realizar otro intento de REGISTER, el cual, es aceptado,
+y se confirma con una respuesta 200 OK, ilustrado en la figura~\ref{fig:02-200OK}, 
 indicando que el registro se ha completado con éxito.
+\bigskip
 
-A continuación, se registra el usuario B (UA2) enviando un mensaje "REGISTER" al servidor,
+A continuación, se registra el usuario B (UA2) enviando un mensaje REGISTER al servidor,
 representado en la figura~\ref{fig:03-Register_UA2}. 
-Siendo este aceptado y confirmado con una respuesta de "200 OK", ilustrado en la figura~\ref{fig:04-200OK}.
+Siendo este aceptado y confirmado con una respuesta de 200 OK, ilustrado en la figura~\ref{fig:04-200OK}.
+\bigskip
 
-La fase de llamada comienza con un "INVITE" acompañado de una descripción de la sesión (SDP), escenificado en la figura~\ref{fig:05-Invite}, 
+La fase de llamada comienza con un INVITE acompañado de una descripción de la sesión (SDP), escenificado en la figura~\ref{fig:05-Invite}, 
 que contiene los detalles para establecer la comunicación. 
-Este mensaje es respondido con un "100 TRYING", evidenciado en la figura~\ref{fig:07-Trying},
-seguido de un "180 RINGING", ilustrado en la figura~\ref{fig:08-Ringing}, 
+Este mensaje es respondido con un 100 TRYING, evidenciado en la figura~\ref{fig:07-Trying},
+seguido de un 180 RINGING, ilustrado en la figura~\ref{fig:08-Ringing}, 
 que indica que la llamada está siendo procesada y que el otro usuario está siendo alertado de la llamada entrante. 
-Cuando el usuario B (UA2) acepta la llamada, envía una respuesta "200 OK + SDP", representado en la figura~\ref{fig:09-200OKSDP}, 
+Cuando el usuario B (UA2) acepta la llamada, envía una respuesta 200 OK + SDP, representado en la figura~\ref{fig:09-200OKSDP}, 
 que contiene la confirmación y los detalles necesarios para establecer la comunicación. 
-El usuario A (UA1) confirma recibir esta información con un "ACK", mostrado en la figura~\ref{fig:13-ACK}.
+El usuario A (UA1) confirma recibir esta información con un ACK, mostrado en la figura~\ref{fig:13-ACK}.
+\bigskip
 
 Una vez establecida la llamada, los datos multimedia se transmiten a través de 
-paquetes "RTP" (Protocolo de Transporte en Tiempo Real), escenificado en la figura~\ref{fig:15-RTP}, 
+paquetes RTP (Protocolo de Transporte en Tiempo Real), escenificado en la figura~\ref{fig:15-RTP}, 
 representados por las esferas azules. Este intercambio continúa hasta que uno de los usuarios decide terminar la llamada, 
-enviando un mensaje "BYE", ilustrado en la figura~\ref{fig:16-BYE}. 
-El fin de la llamada es confirmado por el otro usuario con un "200 OK", representado en la figura~\ref{fig:18-200OK}, 
+enviando un mensaje BYE, ilustrado en la figura~\ref{fig:16-BYE}. 
+El fin de la llamada es confirmado por el otro usuario con un 200 OK, representado en la figura~\ref{fig:18-200OK}, 
 cerrando así la sesión de comunicación.
 % Bloque 1 %
 \begin{figure}
   \centering
-  \includegraphics[width=15cm, keepaspectratio]{img/resultados/01-Register_UA1.png}
+  \includegraphics[width=12cm, keepaspectratio]{img/resultados/01-Register_UA1.png}
   \caption{Mensaje de Registro Inicial de UA1}
   \label{fig:01-Register_UA1}
 \end{figure}
 
 \begin{figure}
   \centering
-  \includegraphics[width=15cm, keepaspectratio]{img/resultados/02-Unauthorized.png}
+  \includegraphics[width=12cm, keepaspectratio]{img/resultados/02-Unautorized.png}
   \caption{Respuesta 401 Unauthorized a UA1}
-  \label{fig:02-Unauthorized}
+  \label{fig:02-Unautorized}
 \end{figure}
 
 \begin{figure}
   \centering
-  \includegraphics[width=15cm, keepaspectratio]{img/resultados/02-200OK.png}
+  \includegraphics[width=12cm, keepaspectratio]{img/resultados/02-200OK.png}
   \caption{Registro de UA1 Exitoso con 200 OK}
   \label{fig:02-200OK}
 \end{figure}
 % Bloque 2 %
 \begin{figure}
   \centering
-  \includegraphics[width=15cm, keepaspectratio]{img/resultados/03-Register_UA2.png}
+  \includegraphics[width=12cm, keepaspectratio]{img/resultados/03-Register_UA2.png}
   \caption{Mensaje de Registro Inicial de UA2}
   \label{fig:03-Register_UA2}
 \end{figure}
 
 \begin{figure}
   \centering
-  \includegraphics[width=15cm, keepaspectratio]{img/resultados/04-200OK.png}
+  \includegraphics[width=12cm, keepaspectratio]{img/resultados/04-200OK.png}
   \caption{Registro de UA2 Exitoso con 200 OK}
   \label{fig:04-200OK}
 \end{figure}
@@ -942,35 +875,35 @@ cerrando así la sesión de comunicación.
 % Bloque 3 %
 \begin{figure}
   \centering
-  \includegraphics[width=15cm, keepaspectratio]{img/resultados/05-Invite.png}
+  \includegraphics[width=12cm, keepaspectratio]{img/resultados/05-Invite.png}
   \caption{Inicio de Llamada con el Mensaje INVITE de UA1}
   \label{fig:05-Invite}
 \end{figure}
 
 \begin{figure}
   \centering
-  \includegraphics[width=15cm, keepaspectratio]{img/resultados/07-Trying.png}
+  \includegraphics[width=12cm, keepaspectratio]{img/resultados/07-Trying.png}
   \caption{Respuesta TRYING de UA2 Indicando Procesamiento}
   \label{fig:07-Trying}
 \end{figure}
 
 \begin{figure}
   \centering
-  \includegraphics[width=15cm, keepaspectratio]{img/resultados/08-Ringing.png}
+  \includegraphics[width=12cm, keepaspectratio]{img/resultados/08-Ringing.png}
   \caption{Alerta de Llamada con el Mensaje RINGING de UA2}
   \label{fig:08-Ringing}
 \end{figure}
 
 \begin{figure}
   \centering
-  \includegraphics[width=15cm, keepaspectratio]{img/resultados/09-200OKSDP.png}
+  \includegraphics[width=12cm, keepaspectratio]{img/resultados/09-200OKSDP.png}
   \caption{Confirmación de Llamada con 200 OK + SDP de UA2}
   \label{fig:09-200OKSDP}
 \end{figure}
 
 \begin{figure}
   \centering
-  \includegraphics[width=15cm, keepaspectratio]{img/resultados/13-ACK.png}
+  \includegraphics[width=12cm, keepaspectratio]{img/resultados/13-ACK.png}
   \caption{Reconocimiento ACK de UA1 Completando el Establecimiento de la Llamada}
   \label{fig:13-ACK}
 \end{figure}
@@ -978,21 +911,21 @@ cerrando así la sesión de comunicación.
 % Bloque 4 %
 \begin{figure}
   \centering
-  \includegraphics[width=15cm, keepaspectratio]{img/resultados/15-RTP.png}
+  \includegraphics[width=12cm, keepaspectratio]{img/resultados/15-RTP.png}
   \caption{Transmisión de Datos Multimedia a través de Paquetes RTP}
   \label{fig:15-RTP}
 \end{figure}
 
 \begin{figure}
   \centering
-  \includegraphics[width=15cm, keepaspectratio]{img/resultados/16-BYE.png}
+  \includegraphics[width=12cm, keepaspectratio]{img/resultados/16-BYE.png}
   \caption{Mensaje BYE Enviado para Terminar la Llamada}
   \label{fig:16-BYE}
 \end{figure}
 
 \begin{figure}
   \centering
-  \includegraphics[width=15cm, keepaspectratio]{img/resultados/18-200OK.png}
+  \includegraphics[width=12cm, keepaspectratio]{img/resultados/18-200OK.png}
   \caption{Confirmación del Fin de la Llamada con un 200 OK}
   \label{fig:18-200OK}
 \end{figure}
