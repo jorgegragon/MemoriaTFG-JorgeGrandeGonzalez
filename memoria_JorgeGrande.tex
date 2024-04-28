@@ -863,6 +863,9 @@ incluyendo una representación visual del flujo de transmisión que indica su or
 El proceso y secuencia de intercambio de paquetes en este proyecto se ilustra en la siguiente figura~\ref{fig:Secuencia_Paquetes}, donde se puede observar el orden 
 específico seguido durante las simulaciones.
 
+Esta figura~\ref{fig:Secuencia_Paquetes} ilustra un intercambio de mensajes de protocolo típico en una comunicación de red utilizando el Protocolo de Inicio de Sesión (SIP). 
+Este diagrama de flujo representa la secuencia de mensajes entre dos usuarios que intentan establecer una comunicación, 
+pasando por un proceso de registro y luego de llamada.
 
 \begin{figure}
   \centering
@@ -870,6 +873,131 @@ específico seguido durante las simulaciones.
   \caption{Secuencia del intercambio de paquetes}
   \label{fig:Secuencia_Paquetes}
 \end{figure}
+
+\subsubsection{Desglose de la Secuencia de Comunicación}
+\label{subsubsec:secuencia_comunicación}
+
+Inicialmente, el proceso comienza con un intento de registro, donde el usuario A (UA1) envía un mensaje "REGISTER" al servidor, 
+representado en la figura~\ref{fig:01-Register_UA1}. 
+Si no está autorizado, recibe un "401 Unauthorized", mostrado en la figura~\ref{fig:02-Unauthorized}, 
+lo que obliga al usuario (UA1) a realizar otro intento de "REGISTER", el cual, es aceptado,
+y se confirma con una respuesta "200 OK", ilustrado en la figura~\ref{fig:02-200OK}, 
+indicando que el registro se ha completado con éxito.
+
+A continuación, se registra el usuario B (UA2) enviando un mensaje "REGISTER" al servidor,
+representado en la figura~\ref{fig:03-Register_UA2}. 
+Siendo este aceptado y confirmado con una respuesta de "200 OK", ilustrado en la figura~\ref{fig:04-200OK}.
+
+La fase de llamada comienza con un "INVITE" acompañado de una descripción de la sesión (SDP), escenificado en la figura~\ref{fig:05-Invite}, 
+que contiene los detalles para establecer la comunicación. 
+Este mensaje es respondido con un "100 TRYING", evidenciado en la figura~\ref{fig:07-Trying},
+seguido de un "180 RINGING", ilustrado en la figura~\ref{fig:08-Ringing}, 
+que indica que la llamada está siendo procesada y que el otro usuario está siendo alertado de la llamada entrante. 
+Cuando el usuario B (UA2) acepta la llamada, envía una respuesta "200 OK + SDP", representado en la figura~\ref{fig:09-200OKSDP}, 
+que contiene la confirmación y los detalles necesarios para establecer la comunicación. 
+El usuario A (UA1) confirma recibir esta información con un "ACK", mostrado en la figura~\ref{fig:13-ACK}.
+
+Una vez establecida la llamada, los datos multimedia se transmiten a través de 
+paquetes "RTP" (Protocolo de Transporte en Tiempo Real), escenificado en la figura~\ref{fig:15-RTP}, 
+representados por las esferas azules. Este intercambio continúa hasta que uno de los usuarios decide terminar la llamada, 
+enviando un mensaje "BYE", ilustrado en la figura~\ref{fig:16-BYE}. 
+El fin de la llamada es confirmado por el otro usuario con un "200 OK", representado en la figura~\ref{fig:18-200OK}, 
+cerrando así la sesión de comunicación.
+% Bloque 1 %
+\begin{figure}
+  \centering
+  \includegraphics[width=15cm, keepaspectratio]{img/resultados/01-Register_UA1.png}
+  \caption{Mensaje de Registro Inicial de UA1}
+  \label{fig:01-Register_UA1}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=15cm, keepaspectratio]{img/resultados/02-Unauthorized.png}
+  \caption{Respuesta 401 Unauthorized a UA1}
+  \label{fig:02-Unauthorized}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=15cm, keepaspectratio]{img/resultados/02-200OK.png}
+  \caption{Registro de UA1 Exitoso con 200 OK}
+  \label{fig:02-200OK}
+\end{figure}
+% Bloque 2 %
+\begin{figure}
+  \centering
+  \includegraphics[width=15cm, keepaspectratio]{img/resultados/03-Register_UA2.png}
+  \caption{Mensaje de Registro Inicial de UA2}
+  \label{fig:03-Register_UA2}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=15cm, keepaspectratio]{img/resultados/04-200OK.png}
+  \caption{Registro de UA2 Exitoso con 200 OK}
+  \label{fig:04-200OK}
+\end{figure}
+
+% Bloque 3 %
+\begin{figure}
+  \centering
+  \includegraphics[width=15cm, keepaspectratio]{img/resultados/05-Invite.png}
+  \caption{Inicio de Llamada con el Mensaje INVITE de UA1}
+  \label{fig:05-Invite}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=15cm, keepaspectratio]{img/resultados/07-Trying.png}
+  \caption{Respuesta TRYING de UA2 Indicando Procesamiento}
+  \label{fig:07-Trying}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=15cm, keepaspectratio]{img/resultados/08-Ringing.png}
+  \caption{Alerta de Llamada con el Mensaje RINGING de UA2}
+  \label{fig:08-Ringing}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=15cm, keepaspectratio]{img/resultados/09-200OKSDP.png}
+  \caption{Confirmación de Llamada con 200 OK + SDP de UA2}
+  \label{fig:09-200OKSDP}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=15cm, keepaspectratio]{img/resultados/13-ACK.png}
+  \caption{Reconocimiento ACK de UA1 Completando el Establecimiento de la Llamada}
+  \label{fig:13-ACK}
+\end{figure}
+
+% Bloque 4 %
+\begin{figure}
+  \centering
+  \includegraphics[width=15cm, keepaspectratio]{img/resultados/15-RTP.png}
+  \caption{Transmisión de Datos Multimedia a través de Paquetes RTP}
+  \label{fig:15-RTP}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=15cm, keepaspectratio]{img/resultados/16-BYE.png}
+  \caption{Mensaje BYE Enviado para Terminar la Llamada}
+  \label{fig:16-BYE}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=15cm, keepaspectratio]{img/resultados/18-200OK.png}
+  \caption{Confirmación del Fin de la Llamada con un 200 OK}
+  \label{fig:18-200OK}
+\end{figure}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
