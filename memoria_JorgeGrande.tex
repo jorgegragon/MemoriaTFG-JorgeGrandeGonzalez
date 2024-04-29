@@ -161,17 +161,31 @@ Además, la pareja quizás no sea para siempre, pero tu madre sí.
 %\addcontentsline{toc}{chapter}{Resumen} % si queremos que aparezca en el índice
 \markboth{RESUMEN}{RESUMEN} % encabezado
 
-Aquí viene un resumen del proyecto.
-Ha de constar de tres o cuatro párrafos, donde se presente de manera clara y concisa de qué va el proyecto. 
-Han de quedar respondidas las siguientes preguntas:
+Este proyecto se enfoca en el desarrollo de un sistema de comunicación interactiva implementado en un entorno de realidad virtual, 
+utilizando el Protocolo de Inicio de Sesión (SIP) y el Protocolo de Transporte en Tiempo Real (RTP) para gestionar la señalización y 
+la transmisión de datos multimedia. El objetivo principal es construir una representación visual y funcional que permita a los usuarios 
+experimentar de manera tangible los flujos y la gestión de las comunicaciones en tiempo real, utilizando tecnologías de realidad virtual.
 
-\begin{itemize}
-  \item ¿De qué va este proyecto? ¿Cuál es su objetivo principal?
-  \item ¿Cómo se ha realizado? ¿Qué tecnologías están involucradas?
-  \item ¿En qué contexto se ha realizado el proyecto? ¿Es un proyecto dentro de un marco general?
-\end{itemize}
+\bigskip
 
-Lo mejor es escribir el resumen al final.
+Para lograr este objetivo, se ha utilizado una combinación de herramientas y tecnologías avanzadas, incluyendo la biblioteca de 
+JavaScript Three.js para la renderización de gráficos 3D, así como varios módulos adicionales de Three.js que apoyan la interactividad en 
+entornos VR como VRButton.js, XRControllerModelFactory.js, Stats.js, y OrbitControls.js. El desarrollo se ha llevado a cabo dentro del marco 
+de un proyecto educativo en la universidad, buscando proporcionar una herramienta de enseñanza para 
+estudiantes interesados en la realidad virtual y las telecomunicaciones.
+
+\bigskip
+
+Este TFG se sitúa en el contexto de la necesidad creciente de soluciones tecnológicas avanzadas en el campo de las comunicaciones y 
+la educación virtual. Con el uso de la realidad virtual, el proyecto no solo demuestra la viabilidad técnica de simular sistemas de comunicación 
+complejos en un entorno inmersivo, sino que también explora nuevas posibilidades para la enseñanza y el aprendizaje de conceptos 
+avanzados de telecomunicaciones.
+
+\bigskip
+
+En resumen, este trabajo aporta a la comprensión de cómo las tecnologías emergentes pueden ser aplicadas para mejorar los sistemas de comunicación digital y 
+ofrece una base sólida para futuras investigaciones en la aplicación de la realidad virtual en educación y comunicaciones.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Resumen en inglés
@@ -180,10 +194,28 @@ Lo mejor es escribir el resumen al final.
 %\addcontentsline{toc}{chapter}{Summary} % si queremos que aparezca en el índice
 \markboth{SUMMARY}{SUMMARY} % encabezado
 
-Here comes a translation of the ``Resumen'' into English. 
-Please, double check it for correct grammar and spelling.
-As it is the translation of the ``Resumen'', which is supposed to be written at the end, this as well should be filled out just before submitting.
+This project focuses on the development of an interactive communication system implemented in a virtual reality environment, 
+utilizing the Session Initiation Protocol (SIP) and the Real-time Transport Protocol (RTP) to manage signaling and multimedia data transmission. 
+The main goal is to construct a visual and functional representation that allows users to tangibly experience the flows and 
+management of communications in real-time, using virtual reality technologies.
 
+\bigskip
+
+To achieve this objective, a combination of advanced tools and technologies has been used, including the JavaScript library Three.js for 3D graphics rendering, 
+as well as several additional Three.js modules that support interactivity in VR environments such as VRButton.js, XRControllerModelFactory.js, Stats.js, 
+and OrbitControls.js. The development has been carried out within the framework of an educational project at the university, aiming to provide a teaching tool 
+for students interested in virtual reality and telecommunications.
+
+\bigskip
+
+This thesis is situated in the context of the growing need for advanced technological solutions in the field of communications and virtual education. 
+With the use of virtual reality, the project not only demonstrates the technical feasibility of simulating complex communication systems in an immersive 
+environment but also explores new possibilities for teaching and learning advanced telecommunications concepts.
+
+\bigskip
+
+In summary, this work contributes to the understanding of how emerging technologies can be applied to enhance digital communication systems and provides a solid 
+foundation for future research in the application of virtual reality in education and communications.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -304,15 +336,6 @@ recepción de llamadas.
 \end{enumerate}
 
 
-
-\section{Planificación temporal}
-\label{sec:planificacion-temporal}
-
-A mí me gusta que aquí pongáis una descripción de lo que os ha llevado realizar el trabajo.
-Hay gente que añade un diagrama de GANTT.
-Lo importante es que quede claro cuánto tiempo llevas (tiempo natural, p.ej., 6 meses) y a qué nivel de esfuerzo (p.ej., principalmente los fines de semana).
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % ESTADO DEL ARTE %
@@ -325,7 +348,7 @@ Lo importante es que quede claro cuánto tiempo llevas (tiempo natural, p.ej., 6
 En este capítulo se explicarán todas las tecnologías, herramientas y accesorios necesarios para el desarrollo.
 
 
-\section{Lenguajes de Marcado y Programación} 
+\section{Lenguajes de marcado y programación} 
 \label{sec:lenguajes}
 
 \begin{itemize}
@@ -345,7 +368,7 @@ En este capítulo se explicarán todas las tecnologías, herramientas y accesori
 \end{figure}
 
 
-\section{Importaciones de Bibliotecas JavaScript} 
+\section{Importaciones de bibliotecas JavaScript} 
 \label{sec:importaciones}
 
 \begin{itemize}
@@ -363,7 +386,7 @@ En este capítulo se explicarán todas las tecnologías, herramientas y accesori
 \end{itemize}
 
 
-\section{Herramientas de Desarrollo} 
+\section{Herramientas de desarrollo} 
 \label{sec:herramientas}
 
 \begin{itemize}
@@ -483,7 +506,7 @@ La escena virtual implementada se desarrolla utilizando la biblioteca Three.js,
 que permite la creación de gráficos 3D en un entorno web. Este proyecto configura un entorno interactivo 
 que simula un sistema de comunicación, donde se pueden visualizar los intercambios de mensajes entre diferentes usuarios y un proxy.
 
-\textbf{Estructura Básica}
+\textbf{Estructura básica}
 
 \begin{itemize}
   \item \textbf{Cámara y Controles:} La cámara se configura con una perspectiva que permite al usuario tener una vista adecuada del entorno virtual. 
@@ -496,44 +519,44 @@ que simula un sistema de comunicación, donde se pueden visualizar los intercamb
   
 \end{itemize}
 
-\textbf{Objetos en la Escena}
+\textbf{Objetos en la escena}
 
 \begin{itemize}
-  \item \textbf{Suelo y Paredes:} Se utilizan texturas cargadas para crear un suelo y paredes que encierran la escena, proporcionando un fondo estático.
+  \item \textbf{Suelo y paredes:} Se utilizan texturas cargadas para crear un suelo y paredes que encierran la escena, proporcionando un fondo estático.
   
-  \item \textbf{Objetos Interactivos:} Se crean varias cajas y esferas que representan a diferentes usuarios (UA1, UA2) y un proxy. 
+  \item \textbf{Objetos interactivos:} Se crean varias cajas y esferas que representan a diferentes usuarios (UA1, UA2) y un proxy. 
   Estos objetos se pueden interactuar mediante eventos controlados por los controladores de realidad virtual.
 
-  \item \textbf{Indicadores Visuales:} Se utilizan logos y texturas para indicar estados como "start" y "stop", mostrando visualmente el flujo de la simulación.
+  \item \textbf{Indicadores visuales:} Se utilizan logos y texturas para indicar estados como "start" y "stop", mostrando visualmente el flujo de la simulación.
   
 \end{itemize}
 
-\textbf{Interacción y Dinámica}
+\textbf{Interacción y dinámica}
 
 \begin{itemize}
-  \item \textbf{Inicio de Eventos:} La interacción comienza cuando el usuario activa controles específicos en los controladores de realidad virtual. 
+  \item \textbf{Inicio de eventos:} La interacción comienza cuando el usuario activa controles específicos en los controladores de realidad virtual. 
   Esto puede alterar el estado de los objetos (por ejemplo, cambiar el color para indicar actividad) y cambiar texturas que 
   representan diferentes mensajes enviados y recibidos en la comunicación.
   
-  \item \textbf{Simulación de Mensajes:} Los objetos esféricos se mueven entre las cajas para simular el envío de mensajes. 
+  \item \textbf{Simulación de mensajes:} Los objetos esféricos se mueven entre las cajas para simular el envío de mensajes. 
   La ruta y la dirección de estos objetos dependen de las interacciones del usuario y el flujo del protocolo simulado.
 
-  \item \textbf{Animación de Paquetes RTP:} En ciertos puntos, esferas adicionales se mueven para simular la transmisión de paquetes RTP, 
+  \item \textbf{Animación de paquetes RTP:} En ciertos puntos, esferas adicionales se mueven para simular la transmisión de paquetes RTP, 
   indicando el intercambio de media en una llamada establecida.
   
 \end{itemize}
 
 
-\textbf{Implementación Técnica}
+\textbf{Implementación}
 
 \begin{itemize}
   \item \textbf{Controladores XR:} Se configuran controladores para manejar la interacción en un entorno de realidad extendida (XR). 
   Esto incluye la gestión de eventos de selección y conexión de dispositivos.
   
-  \item \textbf{Animación y Actualización de la Escena:} Los objetos esféricos se mueven entre las cajas para simular el envío de mensajes. 
+  \item \textbf{Animación y actualización de la escena:} Los objetos esféricos se mueven entre las cajas para simular el envío de mensajes. 
   La ruta y la dirección de estos objetos dependen de las interacciones del usuario y el flujo del protocolo simulado.
 
-  \item \textbf{Animación de Paquetes RTP:} La lógica para mover objetos y actualizar estados se ejecuta dentro de un bucle 
+  \item \textbf{Animación de paquetes RTP:} La lógica para mover objetos y actualizar estados se ejecuta dentro de un bucle 
   de animación que recalcula posiciones y estados basados en la interacción del usuario.
   
 \end{itemize}
@@ -546,13 +569,13 @@ que simula un sistema de comunicación, donde se pueden visualizar los intercamb
 \end{figure}
 
 
-\section{Controles de Realidad Virtual}
+\section{Controles de realidad virtual}
 \label{sec:controles_vr}
 
 La implementación de controles de realidad virtual en la aplicación proporciona una interfaz interactiva que mejora significativamente la experiencia del usuario, 
 permitiendo una manipulación intuitiva y directa de la escena virtual.
 
-\subsection{Configuración de los Controladores VR}
+\subsection{Configuración de los controladores VR}
 \label{subsec:configuracion_controladores_vr}
 
 Los controladores VR son dispositivos físicos que los usuarios sostienen en sus manos y que detectan sus movimientos y gestos en el espacio tridimensional. 
@@ -573,7 +596,7 @@ Estos están equipados con una variedad de sensores y botones que permiten una g
 \end{figure}
 
 
-\subsection{Interacción Mediante Controladores VR}
+\subsection{Interacción mediante controladores VR}
 \label{subsec:interaccion_controladores_vr}
 
 La interacción con la escena se realiza a través de los controladores VR de la siguiente manera:
@@ -588,7 +611,7 @@ La interacción con la escena se realiza a través de los controladores VR de la
   cambiando modos de visualización o ajustando parámetros específicos de los objetos.
 \end{itemize}
 
-\subsection{Implementación Técnica}
+\subsection{Implementación técnica}
 \label{subsec:implementacion_tecnica_vr}
 
 La implementación técnica de los controladores VR en la aplicación utiliza la API de WebXR, integrada con Three.js, para gestionar la entrada 
@@ -602,11 +625,11 @@ intuitiva y efectiva dentro del entorno virtual. Cada trigger tiene un propósit
 usuario y la funcionalidad de la aplicación:
 
 \begin{itemize}
-  \item \textbf{Trigger del Controlador Izquierdo}: Este botón se utiliza para la navegación dentro de la escena. Al presionar el trigger del controlador izquierdo, 
+  \item \textbf{Trigger del controlador izquierdo}: Este botón se utiliza para la navegación dentro de la escena. Al presionar el trigger del controlador izquierdo, 
   el usuario puede desplazarse hacia donde esté mirando con las gafas de realidad virtual, lo que permite una navegación intuitiva y natural. 
   Esta funcionalidad es fundamental para explorar diferentes áreas de la escena de manera fluida.
   
-  \item \textbf{Trigger del Controlador Derecho}: El trigger del controlador derecho está configurado para interactuar con objetos 
+  \item \textbf{Trigger del controlador derecho}: El trigger del controlador derecho está configurado para interactuar con objetos 
   específicos de la escena. Cuando se presiona este botón, se puede seleccionar o activar elementos dentro de la escena, 
   como iniciar una simulación, modificar parámetros de un objeto, o ejecutar acciones específicas relacionadas con los objetos con los que se interactúa. 
   Esta interacción es esencial para manipular elementos de la aplicación y para participar activamente en las simulaciones y demostraciones que se presentan en el entorno virtual.
@@ -637,7 +660,7 @@ En este capítulo, se presentan los resultados derivados de las interacciones co
 de realidad virtual desarrollada. Se describirá cómo distintas selecciones de objetos generan resultados visuales y 
 funcionales diferentes, lo que demuestra la dinámica y la reactividad de la aplicación ante las acciones del usuario.
 
-\section{Descripción de las Interacciones}
+\section{Descripción de las interacciones}
 \label{sec:descripcion_interacciones}
 Las interacciones en la aplicación permiten a los usuarios seleccionar objetos virtuales, 
 los cuales alteran el estado de la escena y desencadenan eventos específicos. 
@@ -694,7 +717,7 @@ Este cambio refleja cómo el sistema procesa y responde a las interacciones, ofr
 \end{figure}
 
 
-\subsection{Interacción con el Proxy}
+\subsection{Interacción con el proxy}
 \label{subsec:objeto_proxy}
 
 Este objeto representa un servidor proxy en el entorno virtual y está visualizado como una caja con textura oscura,
@@ -804,7 +827,7 @@ pasando por un proceso de registro y luego de llamada.
   \label{fig:Secuencia_Paquetes}
 \end{figure}
 
-\subsubsection{Desglose de la Secuencia de Comunicación}
+\subsubsection{Desglose de la secuencia de comunicación}
 \label{subsubsec:secuencia_comunicación}
 
 Inicialmente, el proceso comienza con un intento de registro, donde el usuario A (UA1) envía un mensaje REGISTER al servidor, 
@@ -840,7 +863,7 @@ cerrando así la sesión de comunicación.
 \begin{figure}
   \centering
   \includegraphics[width=12cm, keepaspectratio]{img/resultados/01-Register_UA1.png}
-  \caption{Mensaje de Registro Inicial de UA1}
+  \caption{Mensaje de registro inicial de UA1}
   \label{fig:01-Register_UA1}
 \end{figure}
 
@@ -854,21 +877,21 @@ cerrando así la sesión de comunicación.
 \begin{figure}
   \centering
   \includegraphics[width=12cm, keepaspectratio]{img/resultados/02-200OK.png}
-  \caption{Registro de UA1 Exitoso con 200 OK}
+  \caption{Registro de UA1 exitoso con 200 OK}
   \label{fig:02-200OK}
 \end{figure}
 % Bloque 2 %
 \begin{figure}
   \centering
   \includegraphics[width=12cm, keepaspectratio]{img/resultados/03-Register_UA2.png}
-  \caption{Mensaje de Registro Inicial de UA2}
+  \caption{Mensaje de registro inicial de UA2}
   \label{fig:03-Register_UA2}
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics[width=12cm, keepaspectratio]{img/resultados/04-200OK.png}
-  \caption{Registro de UA2 Exitoso con 200 OK}
+  \caption{Registro de UA2 exitoso con 200 OK}
   \label{fig:04-200OK}
 \end{figure}
 
@@ -876,35 +899,35 @@ cerrando así la sesión de comunicación.
 \begin{figure}
   \centering
   \includegraphics[width=12cm, keepaspectratio]{img/resultados/05-Invite.png}
-  \caption{Inicio de Llamada con el Mensaje INVITE de UA1}
+  \caption{Inicio de llamada con el mensaje INVITE de UA1}
   \label{fig:05-Invite}
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics[width=12cm, keepaspectratio]{img/resultados/07-Trying.png}
-  \caption{Respuesta TRYING de UA2 Indicando Procesamiento}
+  \caption{Respuesta TRYING de UA2 indicando procesamiento}
   \label{fig:07-Trying}
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics[width=12cm, keepaspectratio]{img/resultados/08-Ringing.png}
-  \caption{Alerta de Llamada con el Mensaje RINGING de UA2}
+  \caption{Alerta de llamada con el mensaje RINGING de UA2}
   \label{fig:08-Ringing}
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics[width=12cm, keepaspectratio]{img/resultados/09-200OKSDP.png}
-  \caption{Confirmación de Llamada con 200 OK + SDP de UA2}
+  \caption{Confirmación de llamada con 200 OK + SDP de UA2}
   \label{fig:09-200OKSDP}
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics[width=12cm, keepaspectratio]{img/resultados/13-ACK.png}
-  \caption{Reconocimiento ACK de UA1 Completando el Establecimiento de la Llamada}
+  \caption{Reconocimiento ACK de UA1 completando el establecimiento de la llamada}
   \label{fig:13-ACK}
 \end{figure}
 
@@ -912,21 +935,21 @@ cerrando así la sesión de comunicación.
 \begin{figure}
   \centering
   \includegraphics[width=12cm, keepaspectratio]{img/resultados/15-RTP.png}
-  \caption{Transmisión de Datos Multimedia a través de Paquetes RTP}
+  \caption{Transmisión de datos multimedia a través de paquetes RTP}
   \label{fig:15-RTP}
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics[width=12cm, keepaspectratio]{img/resultados/16-BYE.png}
-  \caption{Mensaje BYE Enviado para Terminar la Llamada}
+  \caption{Mensaje BYE enviado para terminar la llamada}
   \label{fig:16-BYE}
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics[width=12cm, keepaspectratio]{img/resultados/18-200OK.png}
-  \caption{Confirmación del Fin de la Llamada con un 200 OK}
+  \caption{Confirmación del fin de la llamada con un 200 OK}
   \label{fig:18-200OK}
 \end{figure}
 
@@ -945,47 +968,63 @@ cerrando así la sesión de comunicación.
 \section{Consecución de objetivos}
 \label{sec:consecucion-objetivos}
 
-Esta sección es la sección espejo de las dos primeras del capítulo de objetivos, donde se planteaba el objetivo general y se elaboraban los específicos.
+\subsection{Objetivo general}
+El objetivo general del proyecto era construir una representación visual y funcional de los flujos de señalización y 
+datos en un entorno de realidad virtual, utilizando tecnologías avanzadas como Three.js y módulos adicionales para facilitar 
+la interacción en entornos VR. Este objetivo se ha cumplido satisfactoriamente, como se demostró en los resultados de funcionamiento 
+del sistema, donde los usuarios pueden interactuar con la simulación de comunicaciones y experimentar de forma inmersiva el manejo de 
+las comunicaciones en tiempo real.
 
-Es aquí donde hay que debatir qué se ha conseguido y qué no. 
-Cuando algo no se ha conseguido, se ha de justificar, en términos de qué problemas se han encontrado y qué medidas se han tomado para mitigar esos problemas.
-
-Y si has llegado hasta aquí, siempre es bueno pasarle el corrector ortográfico, que las erratas quedan fatal en la memoria final.
-Para eso, en Linux tenemos aspell, que se ejecuta de la siguiente manera desde la línea de \emph{shell}:
-
-\begin{verbatim}
-  aspell --lang=es_ES -c memoria.tex
-\end{verbatim}
 
 \section{Aplicación de lo aprendido}
 \label{sec:aplicacion}
 
-Aquí viene lo que has aprendido durante el Grado/Máster y que has aplicado en el TFG/TFM.
-Una buena idea es poner las asignaturas más relacionadas y comentar en un párrafo los conocimientos y habilidades puestos en práctica.
+A lo largo de mi formación en el grado de Ingeniería en Sistemas Audiovisuales y Multimedia, adquirí una serie de conocimientos y 
+habilidades que han sido fundamentales para el desarrollo de mi proyecto de fin de grado. A continuación, detallo cómo se aplicaron 
+específicamente algunas de las asignaturas más relevantes:
 
 \begin{enumerate}
-  \item a
-  \item b
+  \item \textbf{Informática I e Informática II:} Estas fueron las primeras asignaturas relacionadas con la programación, 
+  las cuales sentaron las bases y aportaron los primeros pasos para desarrollar habilidades en el área de las telecomunicaciones.
+  \item \textbf{Protocolos para la Transmisión de Audio y Vídeo por Internet:} Esta asignatura profundizó en la programación de manera 
+  más específica, realizando prácticas que combinaban conocimientos técnicos con la utilización de protocolos de comunicación.
+  \item \textbf{Construcción de Servicios y Aplicaciones Audiovisuales en Internet:} En esta asignatura se asentaron las bases del desarrollo 
+  web utilizando lenguajes como JavaScript, HTML5 y CSS, elementos cruciales para la interfaz de usuario de mi proyecto.
+  \item \textbf{Gráficos y Visualización en 3D:} Aprendí a desarrollar una parte significativa de mi proyecto, adquiriendo conocimientos en 
+  gráficos 3D, conceptos básicos de WebGL y la creación de gráficos utilizando Three.js.
 \end{enumerate}
 
+En general, todas las asignaturas del grado han aportado valiosos conocimientos y fomentado el desarrollo del pensamiento crítico y la resolución de problemas, habilidades que he aplicado tanto en el TFG como en el entorno laboral.
 
 \section{Lecciones aprendidas}
 \label{sec:lecciones_aprendidas}
 
-Aquí viene lo que has aprendido en el Trabajo Fin de Grado/Máster.
+Durante el desarrollo de este proyecto, he adquirido una serie de conocimientos tanto técnicos como personales que han enriquecido 
+mi experiencia y han contribuido a mi desarrollo profesional.
 
 \begin{enumerate}
-  \item Aquí viene uno.
-  \item Aquí viene otro.
+\item \textbf{Importancia de la planificación detallada:} Una de las lecciones más valiosas ha sido comprender la importancia de una planificación 
+y organización en proyectos de desarrollo tecnológico.
+
+\item \textbf{Profundización en tecnologías de realidad virtual:} El proyecto me permitió profundizar en el uso de tecnologías de realidad virtual, 
+especialmente en la programación con JavaScript y el uso de bibliotecas como Three.js. Aprendí no solo a implementar estas tecnologías sino también 
+a resolver problemas específicos relacionados con la renderización de gráficos 3D y la interactividad en entornos virtuales.
+
+\item \textbf{Capacidad de adaptación y solución de problemas:} Desarrollo de la capacidad de buscar soluciones alternativas y adaptar el enfoque del proyecto según las 
+circunstancias fue importante para el éxito del proyecto.
+
+\item \textbf{Comprensión de los protocolos de comunicación:} El proyecto profundizó mi comprensión de los protocolos de comunicación como SIP y RTP. 
+A través de la implementación práctica, pude ver cómo la teoría se aplica en situaciones reales.
 \end{enumerate}
 
 
 \section{Trabajos futuros}
 \label{sec:trabajos_futuros}
 
-Ningún proyecto ni software se termina, así que aquí vienen ideas y funcionalidades que estaría bien tener implementadas en el futuro.
-
-Es un apartado que sirve para dar ideas de cara a futuros TFGs/TFMs.
+Los resultados obtenidos implican que la aplicación de realidad virtual en el campo de las telecomunicaciones puede mejorar 
+significativamente la comprensión de sistemas complejos de comunicación. Se recomienda que investigaciones futuras exploren 
+ampliar la funcionalidad del sistema para incluir más escenarios de comunicación y evaluar su 
+aplicabilidad en entornos educativos y profesionales.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
