@@ -30,6 +30,7 @@
 \usepackage{float}  %% H para posicionar figuras
 \usepackage[nottoc, notlot, notlof, notindex]{tocbibind} %% Opciones de índice
 \usepackage{latexsym}  %% Logo LaTeX
+\usepackage{hyperref}
 
 \title{Memoria del Proyecto}
 \author{Nombre del autor}
@@ -382,7 +383,8 @@ Finalmente, WebVR se integra con la nube, lo que es una ventaja cada vez más de
 \label{sec:lenguajes}
 
 \begin{itemize}
-  \item \textbf{HTML:} Lenguaje estándar para crear páginas web, define la estructura y el contenido utilizando etiquetas.
+  \item \textbf{HTML:} Lenguaje estándar para crear páginas web, define la estructura y el contenido utilizando etiquetas
+  \footnote{\url{https://developer.mozilla.org/es/docs/Web/HTML}}.
     \begin{itemize}
         \item Funcionalidades clave:
         \begin{itemize}
@@ -392,7 +394,8 @@ Finalmente, WebVR se integra con la nube, lo que es una ventaja cada vez más de
         \end{itemize}
     \end{itemize}
   
-  \item \textbf{JavaScript:} Lenguaje de programación utilizado en desarrollo web para agregar interactividad y dinamismo a las páginas.
+  \item \textbf{JavaScript:} Lenguaje de programación utilizado en desarrollo web para agregar interactividad y dinamismo a las páginas
+  \footnote{\url{https://developer.mozilla.org/en-US/docs/Web/JavaScript}}.
     \begin{itemize}
         \item Funcionalidades clave:
         \begin{itemize}
@@ -402,7 +405,8 @@ Finalmente, WebVR se integra con la nube, lo que es una ventaja cada vez más de
         \end{itemize}
     \end{itemize}
   
-  \item \textbf{TeX:} Sistema de composición tipográfica utilizado principalmente para la creación de documentos científicos y técnicos de calidad.
+  \item \textbf{TeX:} Sistema de composición tipográfica utilizado principalmente para la creación de documentos científicos y técnicos de calidad
+  \footnote{\url{https://www.latex-project.org/}}.
     \begin{itemize}
         \item Funcionalidades clave:
         \begin{itemize}
@@ -431,7 +435,8 @@ así como la integración de funcionalidades de realidad virtual (VR) y realidad
   \item \textbf{THREE.js:}
     \begin{itemize}
       \item \textbf{Descripción:} THREE.js es una biblioteca de código abierto que proporciona una amplia gama de herramientas y funciones para trabajar 
-      con gráficos en 3D en el navegador web. Permite la creación y manipulación de escenas 3D, modelos tridimensionales, materiales, luces y cámaras.
+      con gráficos en 3D en el navegador web. Permite la creación y manipulación de escenas 3D, modelos tridimensionales, materiales, luces y 
+      cámaras~\cite{Documentacion_Three.js}.
       \item \textbf{Funcionalidades clave:}
       \begin{itemize}
         \item Renderización de gráficos 3D en tiempo real.
@@ -446,7 +451,7 @@ así como la integración de funcionalidades de realidad virtual (VR) y realidad
     \begin{itemize}
       \item \textbf{Descripción:} VRButton.js es un módulo de THREE.js diseñado específicamente para simplificar la integración de funcionalidades de realidad 
       virtual en aplicaciones web. Proporciona una interfaz para la activación y desactivación de la visualización en VR, así como para la detección de dispositivos 
-      de VR compatibles.
+      de VR compatibles~\cite{Documentacion_VR}.
       \item \textbf{Funcionalidades clave:}
       \begin{itemize}
         \item Integración de botones para activar/desactivar la visualización en VR.
@@ -459,7 +464,7 @@ así como la integración de funcionalidades de realidad virtual (VR) y realidad
     \begin{itemize}
       \item \textbf{Descripción:} XRControllerModelFactory.js es otro módulo de THREE.js que ofrece una fábrica para la creación de modelos de controladores de 
       realidad extendida (XR). Estos modelos son representaciones visuales de los controladores utilizados por los usuarios dentro del entorno virtual y pueden 
-      personalizarse según las necesidades del proyecto.
+      personalizarse según las necesidades del proyecto~\cite{Documentacion_WebXR}.
       \item \textbf{Funcionalidades clave:}
       \begin{itemize}
         \item Creación de modelos de controladores XR para representar dispositivos de VR/AR.
@@ -483,7 +488,7 @@ así como la integración de funcionalidades de realidad virtual (VR) y realidad
   \item \textbf{OrbitControls.js:}
     \begin{itemize}
       \item \textbf{Descripción:} OrbitControls.js es un módulo de THREE.js que proporciona controles de órbita para permitir al usuario manipular la cámara 
-      en una escena 3D de manera interactiva. Permite rotar, acercar y alejar la vista de la escena, lo que mejora la experiencia de navegación.
+      en una escena 3D de manera interactiva. Permite rotar, acercar y alejar la vista de la escena, lo que mejora la experiencia de navegación~\cite{Documentacion_Controls}.
       \item \textbf{Funcionalidades clave:}
       \begin{itemize}
         \item Control de la cámara para la navegación interactiva en entornos 3D.
@@ -530,7 +535,7 @@ así como la integración de funcionalidades de realidad virtual (VR) y realidad
 \chapter{Diseño e implementación}
 \label{chap:diseno}
 
-En este capítulo, se detalla el desarrollo del proyecto, incluyendo su estructura, los componentes en el entorno 
+En este capítulo se detalla el desarrollo del proyecto, incluyendo su estructura, los componentes en el entorno 
 inmersivo, su funcionamiento, y las interacciones implementadas.
 
 
@@ -607,7 +612,7 @@ El proyecto se estructura en cinco componentes enlazados entre si, representados
 
 \begin{figure}
   \centering
-  \includegraphics[width=9cm, keepaspectratio]{img/estructura.png}
+  \includegraphics[width=12cm, keepaspectratio]{img/estructura.png}
   \caption{Estructura del proyecto}
   \label{fig:arquitectura}
 \end{figure}
@@ -619,6 +624,7 @@ El proyecto se estructura en cinco componentes enlazados entre si, representados
 La escena virtual implementada se desarrolla utilizando la biblioteca Three.js, 
 que permite la creación de gráficos 3D en un entorno web. Este proyecto configura un entorno interactivo 
 que simula un sistema de comunicación, donde se pueden visualizar los intercambios de mensajes entre diferentes usuarios y un proxy.
+Esta escena es representada en la figura~\ref{fig:escena}.
 
 \bigskip
 
@@ -669,8 +675,9 @@ que simula un sistema de comunicación, donde se pueden visualizar los intercamb
   \item \textbf{Controladores XR:} Se configuran controladores para manejar la interacción en un entorno de realidad extendida (XR). 
   Esto incluye la gestión de eventos de selección y conexión de dispositivos.
   
-  \item \textbf{Animación y actualización de la escena:} Los objetos esféricos se mueven entre las cajas para simular el envío de mensajes. 
-  La ruta y la dirección de estos objetos dependen de las interacciones del usuario y el flujo del protocolo simulado.
+  \item \textbf{Animación y actualización de la escena:} La animación de la escena se inicia con los controladores, simulando el intercambio de 
+  paquetes mediante objetos esféricos. Estos objetos siguen una ruta y dirección determinadas por el estado actual del sistema, representando de 
+  manera visual el flujo del protocolo de comunicación.
 
   \item \textbf{Animación de paquetes RTP:} La lógica para mover objetos y actualizar estados se ejecuta dentro de un bucle 
   de animación que recalcula posiciones y estados basados en la interacción del usuario.
@@ -681,7 +688,7 @@ que simula un sistema de comunicación, donde se pueden visualizar los intercamb
   \centering
   \includegraphics[width=9cm, keepaspectratio]{img/escena.png}
   \caption{Escena del proyecto}
-  \label{fig:arquitectura}
+  \label{fig:escena}
 \end{figure}
 
 
@@ -772,7 +779,7 @@ de interactuar con la interfaz y con los elementos virtuales de la escena.
 \chapter{Resultados}
 \label{chap:resultados}
 
-En este capítulo, se presentan los resultados derivados de las interacciones con los objetos de la escena en la aplicación 
+En este capítulo se presentan los resultados derivados de las interacciones con los objetos de la escena en la aplicación 
 de realidad virtual desarrollada. Se describirá cómo distintas selecciones de objetos generan resultados visuales y 
 funcionales diferentes, lo que demuestra la dinámica y la reactividad de la aplicación ante las acciones del usuario.
 
@@ -948,33 +955,58 @@ pasando por un proceso de registro y luego de llamada.
 
 Inicialmente, el proceso comienza con un intento de registro, donde el usuario A (UA1) envía un mensaje REGISTER al servidor, 
 representado en la figura~\ref{fig:01-Register_UA1}. 
+
+\bigskip
+
 Si no está autorizado, recibe un 401 Unauthorized, mostrado en la figura~\ref{fig:02-Unautorized}, 
 lo que obliga al usuario (UA1) a realizar otro intento de REGISTER, el cual, es aceptado,
 y se confirma con una respuesta 200 OK, ilustrado en la figura~\ref{fig:02-200OK}, 
 indicando que el registro se ha completado con éxito.
+
 \bigskip
 
 A continuación, se registra el usuario B (UA2) enviando un mensaje REGISTER al servidor,
 representado en la figura~\ref{fig:03-Register_UA2}. 
 Siendo este aceptado y confirmado con una respuesta de 200 OK, ilustrado en la figura~\ref{fig:04-200OK}.
+
 \bigskip
 
-La fase de llamada comienza con un INVITE acompañado de una descripción de la sesión (SDP), escenificado en la figura~\ref{fig:05-Invite}, 
+
+Ahora que ambos usuarios estan registrados en el servidor proxy, la fase de llamada comienza con un INVITE acompañado de 
+una descripción de la sesión (SDP), escenificado en la figura~\ref{fig:05-Invite}, 
 que contiene los detalles para establecer la comunicación. 
+
+\bigskip
+
 Este mensaje es respondido con un 100 TRYING, evidenciado en la figura~\ref{fig:07-Trying},
 seguido de un 180 RINGING, ilustrado en la figura~\ref{fig:08-Ringing}, 
 que indica que la llamada está siendo procesada y que el otro usuario está siendo alertado de la llamada entrante. 
+
+\bigskip
+
 Cuando el usuario B (UA2) acepta la llamada, envía una respuesta 200 OK + SDP, representado en la figura~\ref{fig:09-200OKSDP}, 
 que contiene la confirmación y los detalles necesarios para establecer la comunicación. 
+
+\bigskip
+
 El usuario A (UA1) confirma recibir esta información con un ACK, mostrado en la figura~\ref{fig:13-ACK}.
+
 \bigskip
 
 Una vez establecida la llamada, los datos multimedia se transmiten a través de 
 paquetes RTP (Protocolo de Transporte en Tiempo Real), escenificado en la figura~\ref{fig:15-RTP}, 
-representados por las esferas azules. Este intercambio continúa hasta que uno de los usuarios decide terminar la llamada, 
+representados por las esferas azules. 
+
+\bigskip
+
+Este intercambio continúa hasta que uno de los usuarios decide terminar la llamada, 
 enviando un mensaje BYE, ilustrado en la figura~\ref{fig:16-BYE}. 
+
+\bigskip
+
 El fin de la llamada es confirmado por el otro usuario con un 200 OK, representado en la figura~\ref{fig:18-200OK}, 
 cerrando así la sesión de comunicación.
+
 % Bloque 1 %
 \begin{figure}
   \centering
@@ -1153,9 +1185,82 @@ aplicabilidad en entornos educativos y profesionales.
 \chapter{Manual de usuario}
 \label{app:manual}
 
-Esto es un apéndice.
-Si has creado una aplicación, siempre viene bien tener un manual de usuario.
-Pues ponlo aquí.
+Este apéndice proporciona un manual de usuario para la aplicación desarrollada en este proyecto. 
+Aquí se explican los pasos para instalar, configurar y utilizar la aplicación.
+
+\section{Requisitos del sistema}
+Para utilizar esta aplicación, asegúrate de que tu sistema cumple con los siguientes requisitos:
+\begin{itemize}
+    \item Sistema operativo: Windows.
+    \item Navegador web compatible: Google Chrome.
+    \item Hardware: Gafas de realidad virtual (por ejemplo, Oculus Quest 2) o en su defecto, descargarse la extensión Web XR API Emulator.
+    \item Conexión a Internet.
+\end{itemize}
+
+\section{Uso de la aplicación}
+\subsection{Instalación de la extensión WebXR API Emulator}
+Lo primero que debemos hacer es descargarnos e instalar la extensión 
+Web XR API Emulator.
+
+Una vez realizado este paso, accedemos a la URL donde se encuentra 
+desplegada la aplicación. La URL es la siguiente:
+
+\url{https://jorgegragon.github.io/TFGJorge/VRM/index.html}
+
+Al acceder al enlace, veremos lo siguiente.
+
+\subsection{Activación de la realidad virtual}
+A continuación pulsamos F12 para abrir la herramienta de desarrollador, 
+donde seleccionaremos en la parte superior de esta ventana, la opción de WebXR.
+
+Una vez realizado este paso, en la parte inferior de la escena, tenemos 
+un botón que pone Enter VR. Lo pulsamos para activar la realidad virtual.
+
+\subsection{Interacción en la aplicación}
+Ya tenemos la aplicación funcionando, podremos movernos por la escena, 
+accionar botones y obtener información acerca de los usuarios y del proxy.
+
+Tenemos dos controles, que producen interacción con la aplicación:
+\begin{itemize}
+  \item \textbf{Select Button del controlador izquierdo:} Con este botón nos movemos por la escena en la dirección frontal hacia donde están mirando las gafas virtuales.
+  \item \textbf{Select Button del controlador derecho:} Con este botón interactuamos con los objetos de la escena. Apuntamos 
+  hacia el objeto y pulsamos el botón. Esto hará que, dependiendo del 
+  objeto seleccionado, se produzca o no un cambio en la escena.
+\end{itemize}
+
+\subsection{Activación de la secuencia de intercambio de paquetes}
+Para activar la secuencia del intercambio de paquetes, con el controlador derecho, 
+apuntar hacia el botón de START y pulsamos el Select Button.
+
+De esta forma, veremos cómo se ejecuta el intercambio, pudiendo pararlo en todo 
+momento para obtener información de los paquetes, usuarios o proxy, de la misma 
+forma que hemos
+hecho anteriormente, ya que el botón en la escena que indicaba START ahora 
+indicará STOP.
+
+\section{Modo sin realidad virtual}
+Adicionalmente, si no se desea ejecutar la aplicación en realidad virtual, no se quiere descargar la extensión o no se poseen las gafas VR.
+Podremos visualizar la escena y el intercambio de paquetes en 2D y con los controles del teclado, en la siguiente URL:
+
+\url{https://jorgegragon.github.io/TFGJorge/Original/AreaEstado.html}
+
+Donde los controles serán:
+
+\begin{itemize}
+  \item \textbf{Movimiento:} W, A, S, D, Q y E
+  \item \textbf{Iniciar secuencia:} Usar la barra espaciadora para comenzar el intercambio.
+  \item \textbf{Parar secuencia:} Clicar en los usuarios, proxy o paquete.
+  \item \textbf{Reanudar secuencia:} Usar la barra espaciadora para reanudar.
+\end{itemize}
+
+\cleardoublepage
+
+\bibliographystyle{abbrv}
+\bibliography{memoria_JorgeGrande} 
+~\cite{Ejemplos_Three.js}
+~\cite{webXR}
+~\cite{Using_a_WebXR_controller_using_Three.JS}
+~\cite{Aframe:Supermedium}
 
 
 \end{document}
