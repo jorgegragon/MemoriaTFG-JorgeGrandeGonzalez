@@ -505,25 +505,80 @@ así como la integración de funcionalidades de realidad virtual (VR) y realidad
 \begin{itemize}
   \item \textbf{FireFox:} Navegador web de código abierto conocido por su enfoque en la privacidad y la personalización. Destaca por su capacidad 
   para bloquear rastreadores de anuncios y proteger la privacidad del usuario. Además, ofrece una amplia gama de complementos y extensiones que permiten 
-  personalizar la experiencia de navegación según las preferencias del usuario.
+  personalizar la experiencia de navegación según las preferencias del usuario~\cite{firefox}.
   
   \item \textbf{VisualStudioCode:} Editor de código fuente de Microsoft altamente personalizable y de código abierto, conocido por su rendimiento y amplia gama 
   de extensiones. Es ampliamente utilizado por desarrolladores de software debido a su interfaz intuitiva, funcionalidades avanzadas de edición de código y soporte 
-  para una variedad de lenguajes de programación y tecnologías.
+  para una variedad de lenguajes de programación y tecnologías~\cite{vscode}.
   
   \item \textbf{GitHub:} Plataforma de desarrollo colaborativo de software basada en la nube, que permite a los desarrolladores alojar, revisar, colaborar y desplegar 
   proyectos de software, incluidas aplicaciones web, de manera eficiente y transparente. Es ampliamente utilizado en la comunidad de desarrollo de software para gestionar 
-  versiones de código, coordinar el trabajo en equipo y facilitar la contribución de la comunidad al código abierto.
+  versiones de código, coordinar el trabajo en equipo y facilitar la contribución de la comunidad al código abierto~\cite{github}.
   
   \item \textbf{Oculus Quest 2:} Gafas de realidad virtual autónomas producidas por Oculus (una subsidiaria de Facebook), conocidas por su alta calidad y facilidad de uso. 
   Estas gafas fueron proporcionadas por la universidad para el desarrollo del proyecto. Ofrecen una experiencia inmersiva de realidad virtual sin necesidad de estar 
-  conectadas a un PC o consola, lo que las hace ideales para el desarrollo y la experiencia de usuario en entornos de realidad virtual.
+  conectadas a un PC o consola, lo que las hace ideales para el desarrollo y la experiencia de usuario en entornos de realidad virtual~\cite{oculus}.
   
   \item \textbf{Web XR API Emulator:} Herramienta de desarrollo que permite probar y depurar experiencias de realidad virtual y aumentada basadas en WebXR directamente 
   en el navegador web. Facilita a los desarrolladores la creación y prueba de contenido de realidad virtual y aumentada sin necesidad de hardware especializado, lo que 
-  agiliza el proceso de desarrollo y depuración de aplicaciones basadas en WebXR.
+  agiliza el proceso de desarrollo y depuración de aplicaciones basadas en WebXR~\cite{webxrapiemulator}.
   
 \end{itemize}
+
+
+\section{Protocolos visualizados} 
+\label{sec:protocolos}
+
+\section{Herramientas de desarrollo} 
+\label{sec:herramientas}
+
+En esta sección, se detallan los protocolos utilizados en el desarrollo del proyecto, los cuales son esenciales para la comunicación en tiempo real y 
+la transmisión de datos multimedia.
+
+\begin{itemize}
+  \item \textbf{SIP (Session Initiation Protocol):}
+    \begin{itemize}
+      \item \textbf{Descripción:} SIP es un protocolo de señalización utilizado para iniciar, mantener y finalizar sesiones de comunicación en tiempo real, 
+      como llamadas de voz y video. Es un protocolo de capa de aplicación que puede gestionar la creación, modificación y finalización de sesiones 
+      con uno o más participantes~\cite{Documentacion_SIP}.
+      \item \textbf{Funcionalidades clave:}
+      \begin{itemize}
+        \item Establecimiento y finalización de llamadas de voz y video.
+        \item Modificación de sesiones en tiempo real añadiendo o eliminando participantes.
+        \item Interoperabilidad con otros protocolos de comunicación.
+        \item Soporte para autenticación y cifrado de comunicaciones.
+      \end{itemize}
+    \end{itemize}
+  
+  \item \textbf{RTP (Real-time Transport Protocol):}
+    \begin{itemize}
+      \item \textbf{Descripción:} RTP es un protocolo de red diseñado para la entrega de datos en tiempo real, como audio y video, a través de redes IP. 
+      Es ampliamente utilizado en aplicaciones que requieren transmisión continua de datos multimedia~\cite{Documentacion_RTP}.
+      \item \textbf{Funcionalidades clave:}
+      \begin{itemize}
+        \item Transmisión de datos en tiempo real (audio y video).
+        \item Sincronización de flujos multimedia.
+        \item Detección y corrección de pérdidas de paquetes.
+        \item Extensibilidad para soportar nuevos códecs y funcionalidades.
+      \end{itemize}
+    \end{itemize}
+  
+  \item \textbf{SDP (Session Description Protocol):}
+    \begin{itemize}
+      \item \textbf{Descripción:} SDP es un formato estándar para describir los detalles de las sesiones multimedia con el objetivo de iniciar y gestionar comunicaciones. 
+      Este protocolo es utilizado comúnmente junto con SIP para negociar los parámetros de la sesión, como los códecs a utilizar, 
+      las direcciones IP y los puertos~\cite{Documentacion_SDP}.
+      \item \textbf{Funcionalidades clave:}
+      \begin{itemize}
+        \item Descripción de los parámetros de la sesión multimedia.
+        \item Negociación de capacidades de comunicación entre los participantes.
+        \item Integración con protocolos de señalización como SIP.
+        \item Formato flexible para adaptarse a diferentes configuraciones de red.
+      \end{itemize}
+    \end{itemize}
+  
+\end{itemize}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
