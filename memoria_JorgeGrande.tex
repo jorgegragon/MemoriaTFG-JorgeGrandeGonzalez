@@ -152,8 +152,7 @@ mi madre}
 %\addcontentsline{toc}{chapter}{Agradecimientos} % si queremos que aparezca en el índice
 \markboth{AGRADECIMIENTOS}{AGRADECIMIENTOS} % encabezado 
 
-Aquí vienen los agradecimientos\ldots Aunque está bien acordarse de la pareja, no hay que olvidarse de dar las gracias a tu madre, que aunque a veces no lo parezca disfrutará tanto de tus logros como tú\ldots 
-Además, la pareja quizás no sea para siempre, pero tu madre sí.
+Agradezco haber tenido la oportunidad de estudiar esta carrera. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Resumen
@@ -476,7 +475,7 @@ así como la integración de funcionalidades de realidad virtual (VR) y realidad
   \item \textbf{Stats.js:}
     \begin{itemize}
       \item \textbf{Descripción:} Stats.js es un módulo de THREE.js que proporciona una herramienta para monitorear el rendimiento de aplicaciones web 3D en tiempo real. 
-      Permite realizar un seguimiento de métricas importantes, como los cuadros por segundo (FPS), el uso de memoria y el tiempo de procesamiento de cuadros.
+      Permite realizar un seguimiento de métricas importantes, como los cuadros por segundo (FPS), el uso de memoria y el tiempo de procesamiento de cuadros~\cite{Statsjs}.
       \item \textbf{Funcionalidades clave:}
       \begin{itemize}
         \item Monitoreo del rendimiento en tiempo real de aplicaciones web 3D.
@@ -505,23 +504,23 @@ así como la integración de funcionalidades de realidad virtual (VR) y realidad
 \begin{itemize}
   \item \textbf{FireFox:} Navegador web de código abierto conocido por su enfoque en la privacidad y la personalización. Destaca por su capacidad 
   para bloquear rastreadores de anuncios y proteger la privacidad del usuario. Además, ofrece una amplia gama de complementos y extensiones que permiten 
-  personalizar la experiencia de navegación según las preferencias del usuario~\cite{firefox}.
+  personalizar la experiencia de navegación según las preferencias del usuario~\cite{Firefox}.
   
   \item \textbf{VisualStudioCode:} Editor de código fuente de Microsoft altamente personalizable y de código abierto, conocido por su rendimiento y amplia gama 
   de extensiones. Es ampliamente utilizado por desarrolladores de software debido a su interfaz intuitiva, funcionalidades avanzadas de edición de código y soporte 
-  para una variedad de lenguajes de programación y tecnologías~\cite{vscode}.
+  para una variedad de lenguajes de programación y tecnologías~\cite{Vscode}.
   
   \item \textbf{GitHub:} Plataforma de desarrollo colaborativo de software basada en la nube, que permite a los desarrolladores alojar, revisar, colaborar y desplegar 
   proyectos de software, incluidas aplicaciones web, de manera eficiente y transparente. Es ampliamente utilizado en la comunidad de desarrollo de software para gestionar 
-  versiones de código, coordinar el trabajo en equipo y facilitar la contribución de la comunidad al código abierto~\cite{github}.
+  versiones de código, coordinar el trabajo en equipo y facilitar la contribución de la comunidad al código abierto~\cite{Github}.
   
   \item \textbf{Oculus Quest 2:} Gafas de realidad virtual autónomas producidas por Oculus (una subsidiaria de Facebook), conocidas por su alta calidad y facilidad de uso. 
   Estas gafas fueron proporcionadas por la universidad para el desarrollo del proyecto. Ofrecen una experiencia inmersiva de realidad virtual sin necesidad de estar 
-  conectadas a un PC o consola, lo que las hace ideales para el desarrollo y la experiencia de usuario en entornos de realidad virtual~\cite{oculus}.
+  conectadas a un PC o consola, lo que las hace ideales para el desarrollo y la experiencia de usuario en entornos de realidad virtual~\cite{Oculus}.
   
   \item \textbf{Web XR API Emulator:} Herramienta de desarrollo que permite probar y depurar experiencias de realidad virtual y aumentada basadas en WebXR directamente 
   en el navegador web. Facilita a los desarrolladores la creación y prueba de contenido de realidad virtual y aumentada sin necesidad de hardware especializado, lo que 
-  agiliza el proceso de desarrollo y depuración de aplicaciones basadas en WebXR~\cite{webxrapiemulator}.
+  agiliza el proceso de desarrollo y depuración de aplicaciones basadas en WebXR~\cite{Webxrapiemulator}.
   
 \end{itemize}
 
@@ -795,7 +794,7 @@ La interacción con la escena se realiza a través de los controladores VR de la
 La implementación técnica de los controladores VR en la aplicación utiliza la API de WebXR, integrada con Three.js, para gestionar la entrada 
 de los dispositivos de realidad virtual. El código configura cada controlador para responder a eventos como `selectstart` y `selectend`, 
 lo que permite detectar interacciones como pulsaciones de botones y liberaciones. Adicionalmente, se emplean rayos virtuales (`raycasting`) 
-para determinar qué objetos están siendo apuntados por los controladores, facilitando así una interacción precisa.
+para determinar qué objetos están siendo apuntados por los controladores, facilitando así una interacción precisa~\cite{Using_a_WebXR_controller_using_Three.JS}.
 
 
 En la implementación de la aplicación, hacemos un uso específico de los botones trigger de los controladores VR para facilitar una interacción 
@@ -962,7 +961,7 @@ Esta visualización es esencial para comprender los requisitos iniciales de conf
 
 \begin{figure}
   \centering
-  \includegraphics[width=15cm, keepaspectratio]{img/resultados/UA2_NoIniciado.png}
+  \includegraphics[width=12cm, keepaspectratio]{img/resultados/UA2_NoIniciado.png}
   \caption{Estado inicial del UA2}
   \label{fig:UA2_NoIniciado}
 \end{figure}
@@ -976,23 +975,29 @@ Este cambio refleja cómo el sistema procesa y responde a las interacciones, ofr
 
 \begin{figure}
   \centering
-  \includegraphics[width=15cm, keepaspectratio]{img/resultados/UA2_Iniciado.png}
+  \includegraphics[width=12cm, keepaspectratio]{img/resultados/UA2_Iniciado.png}
   \caption{Atributos UA2 con valores específicos}
   \label{fig:UA2_Iniciado}
 \end{figure}
 
-
+\clearpage
 \subsection{Interacción con paquetes}
 \label{subsec:objeto_paquetes}
 En el entorno de realidad virtual, los paquetes se representan en forma de esferas que simulan la transmisión de datos en una red. 
 Estas esferas visualizan claramente el flujo de información, con un origen, un destino y un color claramente definidos, 
 dependiendo del tipo de intercambio en el que participan.
 
+\bigskip
+
 Al seleccionar uno de estos paquetes, el sistema mostrará información detallada contenida en el paquete, 
 incluyendo una representación visual del flujo de transmisión que indica su origen, destino y la dirección del flujo.
 
+\bigskip
+
 El proceso y secuencia de intercambio de paquetes en este proyecto se ilustra en la siguiente figura~\ref{fig:Secuencia_Paquetes}, donde se puede observar el orden 
 específico seguido durante las simulaciones.
+
+\bigskip
 
 Esta figura~\ref{fig:Secuencia_Paquetes} ilustra un intercambio de mensajes de protocolo típico en una comunicación de red utilizando el Protocolo de Inicio de Sesión (SIP). 
 Este diagrama de flujo representa la secuencia de mensajes entre dos usuarios que intentan establecer una comunicación, 
@@ -1005,157 +1010,197 @@ pasando por un proceso de registro y luego de llamada.
   \label{fig:Secuencia_Paquetes}
 \end{figure}
 
+
+
+% ······································································· %
+\clearpage
 \subsubsection{Desglose de la secuencia de comunicación}
-\label{subsubsec:secuencia_comunicación}
+\label{subsubsec:secuencia_comunicacion2}
 
 Inicialmente, el proceso comienza con un intento de registro, donde el usuario A (UA1) envía un mensaje REGISTER al servidor, 
 representado en la figura~\ref{fig:01-Register_UA1}. 
 
-\bigskip
-
-Si no está autorizado, recibe un 401 Unauthorized, mostrado en la figura~\ref{fig:02-Unautorized}, 
-lo que obliga al usuario (UA1) a realizar otro intento de REGISTER, el cual, es aceptado,
-y se confirma con una respuesta 200 OK, ilustrado en la figura~\ref{fig:02-200OK}, 
-indicando que el registro se ha completado con éxito.
+Este mensaje contiene información necesaria para que el servidor registre al usuario en el sistema.
+Esta información generalmente incluye el identificador del usuario, su dirección de red y otros parámetros necesarios para la autenticación y la 
+configuración de la sesión.
 
 \bigskip
 
-A continuación, se registra el usuario B (UA2) enviando un mensaje REGISTER al servidor,
-representado en la figura~\ref{fig:03-Register_UA2}. 
-Siendo este aceptado y confirmado con una respuesta de 200 OK, ilustrado en la figura~\ref{fig:04-200OK}.
-
-\bigskip
-
-
-Ahora que ambos usuarios estan registrados en el servidor proxy, la fase de llamada comienza con un INVITE acompañado de 
-una descripción de la sesión (SDP), escenificado en la figura~\ref{fig:05-Invite}, 
-que contiene los detalles para establecer la comunicación. 
-
-\bigskip
-
-Este mensaje es respondido con un 100 TRYING, evidenciado en la figura~\ref{fig:07-Trying},
-seguido de un 180 RINGING, ilustrado en la figura~\ref{fig:08-Ringing}, 
-que indica que la llamada está siendo procesada y que el otro usuario está siendo alertado de la llamada entrante. 
-
-\bigskip
-
-Cuando el usuario B (UA2) acepta la llamada, envía una respuesta 200 OK + SDP, representado en la figura~\ref{fig:09-200OKSDP}, 
-que contiene la confirmación y los detalles necesarios para establecer la comunicación. 
-
-\bigskip
-
-El usuario A (UA1) confirma recibir esta información con un ACK, mostrado en la figura~\ref{fig:13-ACK}.
-
-\bigskip
-
-Una vez establecida la llamada, los datos multimedia se transmiten a través de 
-paquetes RTP (Protocolo de Transporte en Tiempo Real), escenificado en la figura~\ref{fig:15-RTP}, 
-representados por las esferas azules. 
-
-\bigskip
-
-Este intercambio continúa hasta que uno de los usuarios decide terminar la llamada, 
-enviando un mensaje BYE, ilustrado en la figura~\ref{fig:16-BYE}. 
-
-\bigskip
-
-El fin de la llamada es confirmado por el otro usuario con un 200 OK, representado en la figura~\ref{fig:18-200OK}, 
-cerrando así la sesión de comunicación.
-
-% Bloque 1 %
-\begin{figure}
+\begin{figure}[H]
   \centering
-  \includegraphics[width=12cm, keepaspectratio]{img/resultados/01-Register_UA1.png}
+  \includegraphics[width=12cm, keepaspectratio]{img/resultados/01-Register_UA1.PNG}
   \caption{Mensaje de registro inicial de UA1}
   \label{fig:01-Register_UA1}
 \end{figure}
+\clearpage
 
-\begin{figure}
+Si el usuario no está autorizado, recibe un mensaje 401 Unauthorized, mostrado en la figura~\ref{fig:02-Unauthorized}. 
+
+El mensaje 401 Unauthorized es una respuesta del servidor que indica que el intento de registro ha fallado debido a la falta de 
+credenciales adecuadas. Como resultado, el usuario (UA1) debe realizar otro intento de REGISTER con la información de autenticación 
+adecuada, como un nombre de usuario y una contraseña válidos.
+
+\bigskip
+
+\begin{figure}[H]
   \centering
-  \includegraphics[width=12cm, keepaspectratio]{img/resultados/02-Unautorized.png}
+  \includegraphics[width=12cm, keepaspectratio]{img/resultados/02-Unautorized.PNG}
   \caption{Respuesta 401 Unauthorized a UA1}
-  \label{fig:02-Unautorized}
+  \label{fig:02-Unauthorized}
 \end{figure}
+\clearpage
 
-\begin{figure}
+El segundo intento de REGISTER es aceptado y confirmado con una respuesta 200 OK, ilustrado en la figura~\ref{fig:03-200OK}. 
+
+El mensaje 200 OK indica que el servidor ha aceptado el registro del usuario y que el usuario está ahora autenticado y registrado en el sistema. 
+Este mensaje puede incluir información adicional de los parámetros de configuración de la sesión.
+
+\bigskip
+
+\begin{figure}[H]
   \centering
-  \includegraphics[width=12cm, keepaspectratio]{img/resultados/02-200OK.png}
+  \includegraphics[width=12cm, keepaspectratio]{img/resultados/02-200OK.PNG}
   \caption{Registro de UA1 exitoso con 200 OK}
-  \label{fig:02-200OK}
+  \label{fig:03-200OK}
 \end{figure}
-% Bloque 2 %
-\begin{figure}
+\clearpage
+
+A continuación, el usuario B (UA2) se registra enviando un mensaje REGISTER al servidor,
+representado en la figura~\ref{fig:04-Register_UA2}. Este mensaje sigue el mismo proceso de autenticación y registro. 
+
+La figura muestra cómo UA2 inicia el proceso de registro proporcionando su información de autenticación al servidor.
+
+\bigskip
+
+\begin{figure}[H]
   \centering
-  \includegraphics[width=12cm, keepaspectratio]{img/resultados/03-Register_UA2.png}
+  \includegraphics[width=12cm, keepaspectratio]{img/resultados/03-Register_UA2.PNG}
   \caption{Mensaje de registro inicial de UA2}
-  \label{fig:03-Register_UA2}
+  \label{fig:04-Register_UA2}
 \end{figure}
+\clearpage
 
-\begin{figure}
+El registro de UA2 es aceptado y confirmado con una respuesta 200 OK, ilustrado en la figura~\ref{fig:05-200OK_UA2}. 
+
+De igual forma que en registro de UA1, el mensaje 200 OK confirma que UA2 ha sido autenticado y registrado exitosamente en el sistema.
+
+\bigskip
+
+\begin{figure}[H]
   \centering
-  \includegraphics[width=12cm, keepaspectratio]{img/resultados/04-200OK.png}
+  \includegraphics[width=12cm, keepaspectratio]{img/resultados/04-200OK.PNG}
   \caption{Registro de UA2 exitoso con 200 OK}
-  \label{fig:04-200OK}
+  \label{fig:05-200OK_UA2}
 \end{figure}
+\clearpage
 
-% Bloque 3 %
-\begin{figure}
+Ahora que ambos usuarios están registrados en el servidor proxy, la fase de llamada comienza con un mensaje INVITE acompañado de 
+una descripción de la sesión (SDP), escenificado en la figura~\ref{fig:06-Invite}. 
+
+El mensaje INVITE es enviado por UA1 a UA2 a través del servidor y contiene detalles sobre la sesión propuesta, 
+incluyendo los parámetros de conexión.
+
+\bigskip
+
+\begin{figure}[H]
   \centering
-  \includegraphics[width=12cm, keepaspectratio]{img/resultados/05-Invite.png}
+  \includegraphics[width=12cm, keepaspectratio]{img/resultados/06-Invite.PNG}
   \caption{Inicio de llamada con el mensaje INVITE de UA1}
-  \label{fig:05-Invite}
+  \label{fig:06-Invite}
 \end{figure}
+\clearpage
 
-\begin{figure}
+Este mensaje es respondido con un 100 TRYING, evidenciado en la figura~\ref{fig:07-Trying}. 
+El mensaje 100 TRYING indica que el servidor ha recibido el mensaje INVITE y está intentando localizar al usuario de destino (UA2).
+
+Posteriormente, el servidor envía un 180 RINGING, ilustrado en la figura~\ref{fig:08-Ringing}, 
+que indica que la llamada está siendo procesada y que el otro usuario está siendo alertado de la llamada entrante.
+
+\begin{figure}[H]
   \centering
-  \includegraphics[width=12cm, keepaspectratio]{img/resultados/07-Trying.png}
+  \includegraphics[width=9cm, keepaspectratio]{img/resultados/07-Trying.PNG}
   \caption{Respuesta TRYING de UA2 indicando procesamiento}
   \label{fig:07-Trying}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[H]
   \centering
-  \includegraphics[width=12cm, keepaspectratio]{img/resultados/08-Ringing.png}
+  \includegraphics[width=9cm, keepaspectratio]{img/resultados/08-Ringing.PNG}
   \caption{Alerta de llamada con el mensaje RINGING de UA2}
   \label{fig:08-Ringing}
 \end{figure}
+\clearpage
 
-\begin{figure}
+Cuando el usuario B (UA2) acepta la llamada, envía una respuesta 200 OK + SDP, representado en la figura~\ref{fig:09-200OKSDP}. 
+
+Este mensaje contiene la confirmación de que UA2 está listo para establecer la sesión de comunicación y proporciona los detalles 
+necesarios para la transmisión.
+
+\bigskip
+
+\begin{figure}[H]
   \centering
-  \includegraphics[width=12cm, keepaspectratio]{img/resultados/09-200OKSDP.png}
+  \includegraphics[width=12cm, keepaspectratio]{img/resultados/09-200OKSDP.PNG}
   \caption{Confirmación de llamada con 200 OK + SDP de UA2}
   \label{fig:09-200OKSDP}
 \end{figure}
+\clearpage
 
-\begin{figure}
+El usuario A (UA1) confirma recibir esta información con un ACK, mostrado en la figura~\ref{fig:10-ACK}. 
+El mensaje ACK es una confirmación final que completa el establecimiento de la llamada y permite el inicio de la transmisión.
+
+\bigskip
+
+\begin{figure}[H]
   \centering
-  \includegraphics[width=12cm, keepaspectratio]{img/resultados/13-ACK.png}
+  \includegraphics[width=12cm, keepaspectratio]{img/resultados/13-ACK.PNG}
   \caption{Reconocimiento ACK de UA1 completando el establecimiento de la llamada}
-  \label{fig:13-ACK}
+  \label{fig:10-ACK}
 \end{figure}
+\clearpage
 
-% Bloque 4 %
-\begin{figure}
+Una vez establecida la llamada, los datos multimedia se transmiten a través de 
+paquetes RTP (Protocolo de Transporte en Tiempo Real), escenificado en la figura~\ref{fig:11-RTP}. 
+Los paquetes RTP transportan la información de audio entre UA1 y UA2, permitiendo la comunicación en tiempo real.
+
+\bigskip
+
+\begin{figure}[H]
   \centering
-  \includegraphics[width=12cm, keepaspectratio]{img/resultados/15-RTP.png}
+  \includegraphics[width=12cm, keepaspectratio]{img/resultados/15-RTP.PNG}
   \caption{Transmisión de datos multimedia a través de paquetes RTP}
-  \label{fig:15-RTP}
+  \label{fig:11-RTP}
 \end{figure}
+\clearpage
 
-\begin{figure}
+Este intercambio continúa hasta que uno de los usuarios decide terminar la llamada, 
+enviando un mensaje BYE, ilustrado en la figura~\ref{fig:12-BYE}. 
+
+El mensaje BYE indica la intención de finalizar la llamada y cerrar la sesión de comunicación.
+
+\bigskip
+
+\begin{figure}[H]
   \centering
-  \includegraphics[width=12cm, keepaspectratio]{img/resultados/16-BYE.png}
+  \includegraphics[width=12cm, keepaspectratio]{img/resultados/16-BYE.PNG}
   \caption{Mensaje BYE enviado para terminar la llamada}
-  \label{fig:16-BYE}
+  \label{fig:12-BYE}
 \end{figure}
+\clearpage
 
-\begin{figure}
+El fin de la llamada es confirmado por el otro usuario con un 200 OK, representado en la figura~\ref{fig:13-200OK_BYE}, 
+cerrando así la sesión de comunicación. 
+
+Este mensaje final confirma que ambos usuarios han terminado la sesión de manera ordenada.
+
+\bigskip
+
+\begin{figure}[H]
   \centering
-  \includegraphics[width=12cm, keepaspectratio]{img/resultados/18-200OK.png}
+  \includegraphics[width=12cm, keepaspectratio]{img/resultados/18-200OK.PNG}
   \caption{Confirmación del fin de la llamada con un 200 OK}
-  \label{fig:18-200OK}
+  \label{fig:13-200OK_BYE}
 \end{figure}
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1211,7 +1256,7 @@ y organización en proyectos de desarrollo tecnológico.
 
 \item \textbf{Profundización en tecnologías de realidad virtual:} El proyecto me permitió profundizar en el uso de tecnologías de realidad virtual, 
 especialmente en la programación con JavaScript y el uso de bibliotecas como Three.js. Aprendí no solo a implementar estas tecnologías sino también 
-a resolver problemas específicos relacionados con la renderización de gráficos 3D y la interactividad en entornos virtuales.
+a resolver problemas específicos relacionados con la renderización de gráficos 3D y la interactividad en entornos virtuales~\cite{Ejemplos_Three.js}.
 
 \item \textbf{Capacidad de adaptación y solución de problemas:} Desarrollo de la capacidad de buscar soluciones alternativas y adaptar el enfoque del proyecto según las 
 circunstancias fue importante para el éxito del proyecto.
@@ -1311,11 +1356,6 @@ Donde los controles serán:
 \cleardoublepage
 
 \bibliographystyle{abbrv}
-\bibliography{memoria_JorgeGrande} 
-~\cite{Ejemplos_Three.js}
-~\cite{webXR}
-~\cite{Using_a_WebXR_controller_using_Three.JS}
-~\cite{Aframe:Supermedium}
-
+\bibliography{memoria_JorgeGrande}
 
 \end{document}
