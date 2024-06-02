@@ -110,7 +110,7 @@ Entorno Inmersivo 3D con Tecnologías Web
 \end{center}
 
 \vspace{1cm}
-La defensa del presente Proyecto Fin de Carrera se realizó el día \qquad$\;\,$ de \qquad\qquad\qquad\qquad \newline de 2024, siendo calificada por el siguiente tribunal:
+La defensa del presente Trabajo Fin de Grado se realizó el día \qquad$\;\,$ de \qquad\qquad\qquad\qquad \newline de 2024, siendo calificada por el siguiente tribunal:
 
 
 \vspace{0.5cm}
@@ -162,10 +162,10 @@ Agradezco haber tenido la oportunidad de estudiar esta carrera.
 \markboth{RESUMEN}{RESUMEN} % encabezado
 
 Este proyecto se centra en el desarrollo de un entorno de realidad virtual que representa un intercambio de paquetes inspirado en la 
-práctica final de la asignatura de Protocolos para la Transmisión de Audio y Vídeo por Internet. La práctica final implica una sesión 
-SIP para el intercambio de audio a través del protocolo RTP. El objetivo principal es construir una representación visual y funcional 
-que permita a los usuarios experimentar de manera tangible los flujos y la gestión de las comunicaciones en tiempo real, utilizando 
-tecnologías de realidad virtual.
+práctica final de la asignatura de Protocolos para la Transmisión de Audio y Vídeo por Internet. La práctica final implica la creación 
+de un software que simule una sesión SIP para el intercambio de audio a través del protocolo RTP. El objetivo principal de este trabajo es construir 
+una representación visual y funcional que permita a los usuarios experimentar de manera tangible los flujos y la gestión de las comunicaciones 
+en tiempo real, utilizando tecnologías de realidad virtual.
 
 \bigskip
 
@@ -191,8 +191,9 @@ En última instancia, busca no solo ofrecer una experiencia educativa más repre
 \markboth{SUMMARY}{SUMMARY} % encabezado
 
 This project focuses on developing a virtual reality environment that represents a packet exchange inspired by the final project of the Internet Audio and 
-Video Transmission Protocols course. The final project involves a SIP session for audio exchange via the RTP protocol. The main objective is to build a visual 
-and functional representation that allows users to tangibly experience the flows and management of real-time communications using virtual reality technologies.
+Video Transmission Protocols course. The final project involves the creation of software that simulates a SIP session for audio exchange via the RTP protocol. 
+The main objective of this work is to build a visual and functional representation that allows users to tangibly experience the flows and management 
+of real-time communications using virtual reality technologies.
 
 \bigskip
 
@@ -245,7 +246,7 @@ incorporando tecnologías inmersivas como la realidad virtual (VR) para ofrecer 
 \bigskip
 
 Este Trabajo de Fin de Grado se enfoca en aclarar de manera visual, utilizando un entorno de realidad virtual, la práctica final 
-de la asignatura de Protocolos para la Transmisión de Audio y Vídeo por Internet. Esta práctica implica una sesión SIP para el 
+de la asignatura de Protocolos para la Transmisión de Audio y Vídeo por Internet. Esta práctica implica la simulación software de una sesión SIP para el 
 intercambio de audio a través del protocolo RTP, como se representa en la figura~\ref{fig:Secuencia_Paquetes_intro}.
 
 \bigskip
@@ -263,7 +264,7 @@ las posibilidades que la realidad virtual tiene para ofrecer en términos de apr
 \begin{figure}
   \centering
   \includegraphics[width=15cm, keepaspectratio]{img/resultados/Secuencia_Paquetes.png}
-  \caption{Secuencia del intercambio de paquetes}
+  \caption{Secuencia del intercambio de paquetes que se ha de llevar a cabo dentro de la simulación software de una sesión SIP para la iniciación de un intercambio de VoIP}
   \label{fig:Secuencia_Paquetes_intro}
 \end{figure}
 
@@ -346,7 +347,7 @@ recepción de llamadas.
 En este capítulo se explicarán todas las tecnologías, herramientas y accesorios necesarios para el desarrollo, lo cual es crucial para 
 comprender los fundamentos que hacen posible nuestros marcos de desarrollo. Todo esto se debe a avances significativos en tecnologías como WebVR. 
 Hasta hace poco, las experiencias de VR en la web eran limitadas debido a las restricciones de ancho de banda para la transmisión de datos. 
-Sin embargo, esta situación ha cambiado drásticamente. Proyectos como Google Stadia o Steam VR ejemplifican cómo la ejecución de experiencias de VR 
+Sin embargo, esta situación ha cambiado drásticamente en los últimos años. Proyectos como Google Stadia o Steam VR ejemplifican cómo la ejecución de experiencias de VR 
 desde servidores remotos ha transformado la forma en que interactuamos con la realidad virtual en la web.
 
 \bigskip
@@ -365,7 +366,7 @@ móviles, la frecuencia de actualización es de 60Hz y 60fps, mientras que en co
 
 \bigskip
 
-En términos de accesibilidad, WebVR se destaca, ya que no se requieren habilidades técnicas avanzadas para su uso. Con solo tener un ordenador, 
+En términos de accesibilidad, WebVR destaca ya que no se requieren habilidades técnicas avanzadas para su uso. Con solo tener un ordenador, 
 un navegador compatible y hardware de soporte (como gafas VR), puedes disfrutar de una experiencia de VR con solo un clic.
 
 \bigskip
@@ -382,19 +383,17 @@ Finalmente, WebVR se integra con la nube, lo que es una ventaja cada vez más de
 \label{sec:lenguajes}
 
 \begin{itemize}
-  \item \textbf{HTML:} Lenguaje estándar para crear páginas web, define la estructura y el contenido utilizando etiquetas
-  \footnote{\url{https://developer.mozilla.org/es/docs/Web/HTML}}.
+  \item \textbf{HTML:} Lenguaje estándar para crear páginas web, define la estructura y el contenido utilizando etiquetas\footnote{\url{https://developer.mozilla.org/es/docs/Web/HTML}}.
     \begin{itemize}
         \item Funcionalidades clave:
         \begin{itemize}
             \item Definición de la estructura de una página web mediante elementos como encabezados, párrafos, listas, etc.
-            \item Incorporación de contenido multimedia, como imágenes, videos y audio.
+            \item Incorporación de contenido multimedia, como imágenes, vídeos y audio.
             \item Creación de formularios interactivos para la recopilación de datos.
         \end{itemize}
     \end{itemize}
   
-  \item \textbf{JavaScript:} Lenguaje de programación utilizado en desarrollo web para agregar interactividad y dinamismo a las páginas
-  \footnote{\url{https://developer.mozilla.org/en-US/docs/Web/JavaScript}}.
+  \item \textbf{JavaScript:} Lenguaje de programación utilizado en desarrollo web para agregar interactividad y dinamismo a las páginas\footnote{\url{https://developer.mozilla.org/en-US/docs/Web/JavaScript}}.
     \begin{itemize}
         \item Funcionalidades clave:
         \begin{itemize}
@@ -404,8 +403,7 @@ Finalmente, WebVR se integra con la nube, lo que es una ventaja cada vez más de
         \end{itemize}
     \end{itemize}
   
-  \item \textbf{TeX:} Sistema de composición tipográfica utilizado principalmente para la creación de documentos científicos y técnicos de calidad
-  \footnote{\url{https://www.latex-project.org/}}.
+  \item \textbf{TeX:} Sistema de composición tipográfica utilizado principalmente para la creación de documentos científicos y técnicos de calidad\footnote{\url{https://www.latex-project.org/}}.
     \begin{itemize}
         \item Funcionalidades clave:
         \begin{itemize}
@@ -464,7 +462,7 @@ así como la integración de funcionalidades de realidad virtual (VR) y realidad
   \item \textbf{XRControllerModelFactory.js:}
     \begin{itemize}
       \item \textbf{Descripción:} XRControllerModelFactory.js es otro módulo de THREE.js que ofrece una fábrica para la creación de modelos de controladores de 
-      realidad extendida (XR). Estos modelos son representaciones visuales de los controladores utilizados por los usuarios dentro del entorno virtual y pueden 
+      XR. Estos modelos son representaciones visuales de los controladores utilizados por los usuarios dentro del entorno virtual y pueden 
       personalizarse según las necesidades del proyecto~\cite{Documentacion_WebXR}.
       \item \textbf{Funcionalidades clave:}
       \begin{itemize}
@@ -530,10 +528,7 @@ así como la integración de funcionalidades de realidad virtual (VR) y realidad
 \section{Protocolos visualizados} 
 \label{sec:protocolos}
 
-\section{Herramientas de desarrollo} 
-\label{sec:herramientas}
-
-En esta sección, se detallan los protocolos utilizados en el desarrollo del proyecto, los cuales son esenciales para la comunicación en tiempo real y 
+En esta sección se detallan los protocolos utilizados en el desarrollo del proyecto, los cuales son esenciales para la comunicación en tiempo real y 
 la transmisión de datos multimedia.
 
 \begin{itemize}
@@ -598,17 +593,17 @@ inmersivo, su funcionamiento, y las interacciones implementadas.
 \section{Arquitectura general} 
 \label{sec:arquitectura}
 
-El proyecto se estructura en cinco componentes enlazados entre si, representados en la figura~\ref{fig:arquitectura}. Estos componentes serán explicados a continuación:
+El proyecto se estructura en cinco componentes enlazados entre sí, representados en la figura~\ref{fig:arquitectura}. Estos componentes serán explicados a continuación:
 
 \begin{itemize}
-  \item \textbf{index.html:} Representamos la estructura básica de una página web para una experiencia de realidad virtual (VR). 
+  \item \textbf{index.html:} Representamos la estructura básica de una página web para una experiencia de VR. 
   Se define un documento HTML con metadatos y referencias a archivos externos, incluyendo la biblioteca Three.js para gráficos 3D. 
   
   Además, se importa un módulo de JavaScript que inicializa la aplicación VR, creando una instancia de la clase App y asignándola a la ventana del navegador. 
   
   Este archivo proporciona una base para el desarrollo de aplicaciones de realidad virtual en la web.
   
-  \item \textbf{app.js:} Este script es una aplicación que utiliza la biblioteca Three.js para crear una escena 3D interactiva. Que realiza:
+  \item \textbf{app.js:} Este script es una aplicación que utiliza la biblioteca Three.js para crear una escena 3D interactiva. Las tareas que realiza son:
     
     \begin{enumerate}
       \item Importa las bibliotecas necesarias de Three.js para crear la escena.
@@ -618,17 +613,17 @@ El proyecto se estructura en cinco componentes enlazados entre si, representados
       \item Dentro de la clase App, hay métodos para manejar el control de los dispositivos de entrada de VR, como los controladores y sus eventos.
       \item Contiene un método para construir los modelos de los controladores de VR.
       \item Otro método se encarga de manejar la lógica de la animación y la interacción del usuario con la escena.
-      \item Y finalmente, tenemos un método de renderizado que se ejecuta en bucle y actualiza la escena en cada fotograma.
+      \item Y finalmente, hay un método de renderizado que se ejecuta en bucle y actualiza la escena en cada fotograma.
     \end{enumerate}
 
-  \item \textbf{imágenes:} En la arquitectura del proyecto, tenemos una carpeta llamada imagenes que contiene todas las imágenes utilizadas en la aplicación. 
+  \item \textbf{imágenes:} En la arquitectura del proyecto, tenemos una carpeta llamada imagenes que contiene todas las `imágenes` utilizadas en la aplicación. 
   Dentro de esta carpeta, tenemos subcarpetas para organizar las imágenes de acuerdo con su propósito.
 
   Cada imagen se carga en la aplicación utilizando el constructor THREE.TextureLoader().load(), 
   proporcionando la ruta relativa desde el punto donde se está ejecutando el código hacia la ubicación de la imagen en la estructura de carpetas.
 
   \item \textbf{sceneObjets:} Este archivo es un módulo de funciones que proporciona diferentes objetos tridimensionales (3D) utilizando la biblioteca Three.js. 
-  Cada función devuelve un objeto con geometría y material específicos.
+  Cada función devuelve un objeto con geometría y material específicos:
 
   \begin{enumerate}
     \item \textbf{Sphere:} Devuelve una esfera roja con una geometría esférica y un material básico.
@@ -649,7 +644,7 @@ El proyecto se estructura en cinco componentes enlazados entre si, representados
     \item \textbf{build:} En esta subcarpeta se encuentran los archivos de construcción de la biblioteca Three.js, 
     que proporcionan la funcionalidad principal de renderización en 3D. El archivo principal utilizado es three.module.js, 
     que importa todas las funcionalidades esenciales de Three.js.
-    \item \textbf{webxr:} Aquí están los módulos relacionados con WebXR, una API que permite crear experiencias de realidad virtual (VR) y realidad aumentada (AR) en el navegador. 
+    \item \textbf{webxr:} Aquí están los módulos relacionados con WebXR, una API que permite crear experiencias de VR y realidad aumentada (AR) en el navegador. 
     Por ejemplo, VRButton.js proporciona un botón para activar la experiencia de realidad virtual, mientras que XRControllerModelFactory.js 
     permite crear modelos visuales para los controladores de VR.
     \item \textbf{libs:} Esta subcarpeta contiene bibliotecas adicionales utilizadas en el proyecto. 
@@ -701,9 +696,10 @@ Esta escena es representada en la figura~\ref{fig:escena}.
 
 \begin{itemize}
   \item \textbf{Suelo y paredes:} Se utilizan texturas cargadas para crear un suelo y paredes que encierran la escena, proporcionando un fondo estático.
-  
-  \item \textbf{Objetos interactivos:} Se crean varias cajas y esferas que representan a diferentes usuarios (UA1, UA2) y un proxy. 
-  Estos objetos se pueden interactuar mediante eventos controlados por los controladores de realidad virtual.
+
+  \item \textbf{Objetos interactivos:} Se crean varias cajas y esferas que representan a diferentes usuarios, denominados UA1 (User Agent 1) y UA2 (User Agent 2), 
+  así como un proxy. Un User Agent (UA) es una aplicación cliente que actúa en nombre de un usuario en un sistema de comunicación. Estos objetos pueden ser interactuados 
+  mediante eventos controlados por los controladores de realidad virtual.
 
   \item \textbf{Indicadores visuales:} Se utilizan logos y texturas para indicar estados como start y stop, mostrando visualmente el flujo de la simulación.
   
@@ -728,7 +724,7 @@ Esta escena es representada en la figura~\ref{fig:escena}.
 \textbf{Implementación}
 
 \begin{itemize}
-  \item \textbf{Controladores XR:} Se configuran controladores para manejar la interacción en un entorno de realidad extendida (XR). 
+  \item \textbf{Controladores XR:} Se configuran controladores para manejar la interacción en un entorno de XR. 
   Esto incluye la gestión de eventos de selección y conexión de dispositivos.
   
   \item \textbf{Animación y actualización de la escena:} La animación de la escena se inicia con los controladores, simulando el intercambio de 
@@ -794,7 +790,7 @@ La interacción con la escena se realiza a través de los controladores VR de la
 \label{subsec:implementacion_tecnica_vr}
 
 La implementación técnica de los controladores VR en la aplicación utiliza la API de WebXR, integrada con Three.js, para gestionar la entrada 
-de los dispositivos de realidad virtual. El código configura cada controlador para responder a eventos como `selectstart` y `selectend`, 
+de los dispositivos de realidad virtual. El código configura cada controlador para responder a eventos como selectstart y selectend, 
 lo que permite detectar interacciones como pulsaciones de botones y liberaciones. Adicionalmente, se emplean rayos virtuales `raycasting` 
 para determinar qué objetos están siendo apuntados por los controladores, facilitando así una interacción precisa~\cite{Using_a_WebXR_controller_using_Three.JS}.
 
@@ -821,7 +817,7 @@ de interactuar con la interfaz y con los elementos virtuales de la escena.
 \begin{figure}
   \centering
   \includegraphics[width=6cm, keepaspectratio]{img/BotonesControlador.png}
-  \caption{Botones controlador VR}
+  \caption{Botones del controlador VR}
   \label{fig:controladorBotones}
 \end{figure}
 
@@ -877,7 +873,7 @@ Esta visualización es esencial para comprender los requisitos iniciales de conf
 \begin{figure}
   \centering
   \includegraphics[width=15cm, keepaspectratio]{img/resultados/UA1_NoIniciado.png}
-  \caption{Estado inicial del UA1}
+  \caption{Estado inicial del UA1. En la pantalla de la escena se puede observar los atributos de UA1 que hay que configurar}
   \label{fig:UA1_NoIniciado}
 \end{figure}
 
@@ -985,7 +981,7 @@ Este cambio refleja cómo el sistema procesa y responde a las interacciones, ofr
 \clearpage
 \subsection{Interacción con paquetes}
 \label{subsec:objeto_paquetes}
-En el entorno de realidad virtual, los paquetes se representan en forma de esferas que simulan la transmisión de datos en una red. 
+En el entorno de realidad virtual, los paquetes se representan en forma de esferas que simulan la transmisión de datos en paquetes en una red. 
 Estas esferas visualizan claramente el flujo de información, con un origen, un destino y un color claramente definidos, 
 dependiendo del tipo de intercambio en el que participan.
 
@@ -1223,7 +1219,7 @@ Este mensaje final confirma que ambos usuarios han terminado la sesión de maner
 \subsection{Objetivo general}
 El objetivo general del proyecto era construir una representación visual y funcional de los flujos de señalización y 
 datos en un entorno de realidad virtual, utilizando tecnologías avanzadas como Three.js y módulos adicionales para facilitar 
-la interacción en entornos VR. Este objetivo se ha cumplido satisfactoriamente, como se demostró en los resultados de funcionamiento 
+la interacción en entornos VR. Este objetivo se ha cumplido satisfactoriamente, como se ha demostrado en los resultados de funcionamiento 
 del sistema, donde los usuarios pueden interactuar con la simulación de comunicaciones y experimentar de forma inmersiva el manejo de 
 las comunicaciones en tiempo real.
 
